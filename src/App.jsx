@@ -1,5 +1,8 @@
+import BurgerMenu from 'components/BurgerMenu';
+import 'reset-css';
+
 function App() {
-  return <h1>Hello there!</h1>;
+  return <BurgerMenu />;
 }
 
 export default App;
