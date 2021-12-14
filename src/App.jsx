@@ -1,5 +1,7 @@
+import Map from './Components/Map';
+
 function App() {
-  return <h1>Hello there!</h1>;
+  return <Map />;
 }
 
 export default App;
