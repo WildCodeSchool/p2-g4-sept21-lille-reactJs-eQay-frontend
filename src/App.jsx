@@ -8,7 +8,7 @@ function App() {
       <BurgerMenu />
       <Map />
     </>
-  )
+  );
 }
 
 export default App;
