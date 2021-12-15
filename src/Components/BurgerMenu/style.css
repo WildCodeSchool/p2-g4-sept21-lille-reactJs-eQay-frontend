@@ -51,6 +51,8 @@
 
 .bm-item {
   display: inline-block;
+  text-decoration: none;
+  color: black;
 }
 
 .bm-overlay {
