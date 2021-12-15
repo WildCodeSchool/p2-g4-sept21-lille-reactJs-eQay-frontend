@@ -1,4 +1,4 @@
-import BurgerMenu from 'components/BurgerMenu';
+import BurgerMenu from 'Components/BurgerMenu';
 import 'reset-css';
 
 function App() {
