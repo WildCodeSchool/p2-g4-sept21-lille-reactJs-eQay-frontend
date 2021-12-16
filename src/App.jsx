@@ -1,7 +1,14 @@
+import BurgerMenu from 'Components/BurgerMenu';
 import Map from './Components/Map';
+import 'reset-css';
 
 function App() {
-  return <Map />;
+  return (
+    <>
+      <BurgerMenu />
+      <Map />
+    </>
+  );
 }
 
 export default App;
