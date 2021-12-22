@@ -17,7 +17,6 @@ export default function Map() {
     }
   }, []);
 
-  console.log(allDataIndoors);
   return (
     <SMap>
       <MapContainer
@@ -33,7 +32,6 @@ export default function Map() {
         {allDataIndoors && (
           <MarkerClusterGroup>
             {allDataIndoors.map((e) => {
-              console.log(e);
               return (
                 <Marker position={[e.adresses_latitude, e.adresses_longitude]}>
                   <Popup>
