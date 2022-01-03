@@ -10,7 +10,7 @@ export default function Map() {
   useEffect(() => {
     try {
       axios.get('http://localhost:5050/indoor').then(({ data }) => {
-        setAllDataIndoors(data);
+        setAllDataIndoors(data[0]);
       });
     } catch (error) {
       console.log(error);
@@ -29,30 +29,30 @@ export default function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <MarkerClusterGroup>
-          {allDataIndoors.map((e) => {
-            return (
-              <Marker
-                position={[e[0].adresses_latitude, e[0].adresses_longitude]}
-              >
-                <Popup>
-                  <ul>
-                    <li>Aqi : {e[0].aqi}</li>
-                    <li>Pm1 : {e[0].pm1}</li>
-                    <li>Pm10 : {e[0].pm10}</li>
-                    <li>Pm25 : {e[0].pm25}</li>
-                    <li>Ppm : {e[0].ppm}</li>
-                    <li>Temperature : {e[0].temperature}</li>
-                    <li>Timestamp : {e[0].timestamp}</li>
-                    <li>Humidity : {e[0].humidity}</li>
-                    <li>lat : {e[0].adresses_latitude}</li>
-                    <li>long : {e[0].adresses_longitude}</li>
-                  </ul>
-                </Popup>
-              </Marker>
-            );
-          })}
-        </MarkerClusterGroup>
+        {allDataIndoors && (
+          <MarkerClusterGroup>
+            {allDataIndoors.map((e) => {
+              return (
+                <Marker position={[e.adresses_latitude, e.adresses_longitude]}>
+                  <Popup>
+                    <ul>
+                      <li>Aqi : {e.aqi}</li>
+                      <li>Pm1 : {e.pm1}</li>
+                      <li>Pm10 : {e.pm10}</li>
+                      <li>Pm25 : {e.pm25}</li>
+                      <li>Ppm : {e.ppm}</li>
+                      <li>Temperature : {e.temperature}</li>
+                      <li>Timestamp : {e.timestamp}</li>
+                      <li>Humidity : {e.humidity}</li>
+                      <li>lat : {e.adresses_latitude}</li>
+                      <li>long : {e.adresses_longitude}</li>
+                    </ul>
+                  </Popup>
+                </Marker>
+              );
+            })}
+          </MarkerClusterGroup>
+        )}
       </MapContainer>
     </SMap>
   );
