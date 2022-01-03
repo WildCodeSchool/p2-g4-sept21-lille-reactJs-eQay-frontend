@@ -1,3 +1,4 @@
+
 import {
   MapContainer,
   TileLayer,
@@ -28,6 +29,7 @@ export default function Map() {
       </Marker>
     );
   }
+
 
   return (
     <SMap>
