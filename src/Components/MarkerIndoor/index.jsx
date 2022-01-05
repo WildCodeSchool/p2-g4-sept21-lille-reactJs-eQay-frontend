@@ -39,9 +39,9 @@ export default function MarkerIndoor() {
                   <li>Pm10 : {e[0].pm10}</li>
                   <li>Pm25 : {e[0].pm25}</li>
                   <li>Ppm : {e[0].ppm}</li>
-                  <li>Temperature : {e[0].temperature}</li>
-                  <li>Timestamp : {e[0].timestamp}</li>
-                  <li>Humidity : {e[0].humidity}</li>
+                  <li>Température : {e[0].temperature}</li>
+                  <li>Date : {e[0].timestamp}</li>
+                  <li>Humidité : {e[0].humidity}</li>
                 </ul>
               </SPopup>
             </Popup>
