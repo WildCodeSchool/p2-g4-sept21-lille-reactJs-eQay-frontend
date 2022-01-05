@@ -7,9 +7,12 @@ import 'reset-css';
 
 function App() {
   const [findUser, setFindUser] = useState(false);
+  const [showExtSensor, setShowExtSensor] = useState(false);
 
   return (
-    <EqaiContext.Provider value={{ findUser, setFindUser }}>
+    <EqaiContext.Provider
+      value={{ findUser, setFindUser, showExtSensor, setShowExtSensor }}
+    >
       <BurgerMenu />
       <Map />
     </EqaiContext.Provider>
