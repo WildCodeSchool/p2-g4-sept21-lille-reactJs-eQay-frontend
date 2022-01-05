@@ -1,8 +1,35 @@
-import { MapContainer, TileLayer } from 'react-leaflet';
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMapEvents,
+} from 'react-leaflet';
 import MarkerIndoor from '../MarkerIndoor';
+import { useState } from 'react';
+
 import SMap from './style';
 
 export default function Map() {
+  const [position, setPosition] = useState(null);
+  function LocationMarker() {
+    const map = useMapEvents({
+      click() {
+        map.locate();
+      },
+      locationfound(e) {
+        setPosition(e.latlng);
+        map.flyTo(e.latlng, map.getZoom());
+      },
+    });
+
+    return position === null ? null : (
+      <Marker position={position}>
+        <Popup>You are here</Popup>
+      </Marker>
+    );
+  }
+
   return (
     <SMap>
       <MapContainer
@@ -16,6 +43,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <MarkerIndoor />
+        <LocationMarker />
       </MapContainer>
     </SMap>
   );
