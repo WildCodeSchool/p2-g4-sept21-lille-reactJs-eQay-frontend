@@ -36,7 +36,7 @@ export default function Map() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
-            <LocateUsers findUser={findUser} setFindUser={setFindUser} />
+            <LocateUsers />
           </MapContainer>
         </div>
       </SMap>
