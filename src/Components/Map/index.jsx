@@ -1,53 +1,44 @@
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import { useEffect, useState } from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import { useContext } from 'react';
+import EqaiContext from '../../Context/EqaiContext';
 import SMap from './style';
+import LocateUsers from '../LocateUser';
 
 export default function Map() {
-  const [findUser, setFindUser] = useState(false);
+  const { findUser, setFindUser } = useContext(EqaiContext);
 
   function handleLocate() {
     return setFindUser(!findUser);
   }
-
-  function LocationMarker() {
-    const map = useMap();
-    const [position, setPosition] = useState(null);
-
-    useEffect(() => {
-      if (findUser) {
-        map.locate().on('locationfound', function (e) {
-          setPosition(e.latlng);
-          map.flyTo(e.latlng, map.getZoom());
-        });
-        setFindUser(false);
-      }
-    }, [position]);
-
-    return position === null ? null : (
-      <Marker position={position}>
-        <Popup>You are here</Popup>
-      </Marker>
-    );
-  }
   return (
     <>
-      <button type="button" onClick={handleLocate}>
-        Locate
-      </button>
       <SMap>
-        <MapContainer
-          center={[50.629, 3.057]}
-          zoom={13}
-          scrollWheelZoom
-          zoomControl={false}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+        <div id="map">
+          <nav>
+            <button
+              className="bn632-hover bn18"
+              type="button"
+              id="locateButton"
+              onClick={handleLocate}
+            >
+              <span>Locate me</span>
+            </button>
+          </nav>
 
-          <LocationMarker />
-        </MapContainer>
+          <MapContainer
+            center={[50.629, 3.057]}
+            zoom={13}
+            scrollWheelZoom
+            zoomControl={false}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+
+            <LocateUsers findUser={findUser} setFindUser={setFindUser} />
+          </MapContainer>
+        </div>
       </SMap>
     </>
   );
