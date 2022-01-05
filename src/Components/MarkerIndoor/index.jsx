@@ -1,8 +1,15 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import L from 'leaflet';
+import iconeAir from 'assets/iconeair.svg';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import SPopup from './style';
+
+const iconeair = new L.Icon({
+  iconUrl: iconeAir,
+  iconSize: [25, 25],
+});
 
 export default function MarkerIndoor() {
   const [allDataIndoors, setAllDataIndoors] = useState([]);
@@ -20,7 +27,10 @@ export default function MarkerIndoor() {
     <MarkerIndoorGroup>
       {allDataIndoors.map((e) => {
         return (
-          <Marker position={[e[0].adresses_latitude, e[0].adresses_longitude]}>
+          <Marker
+            position={[e[0].adresses_latitude, e[0].adresses_longitude]}
+            icon={iconeair}
+          >
             <Popup>
               <SPopup>
                 <ul>
