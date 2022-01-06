@@ -1,55 +1,45 @@
-
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMapEvents,
-} from 'react-leaflet';
-import { useState } from 'react';
-
+import { MapContainer, TileLayer } from 'react-leaflet';
+import { useContext } from 'react';
+import EqaiContext from '../../Context/EqaiContext';
 import SMap from './style';
+import LocateUsers from '../LocateUser';
 
 export default function Map() {
-  const [position, setPosition] = useState(null);
-  function LocationMarker() {
-    const map = useMapEvents({
-      click() {
-        map.locate();
-      },
-      locationfound(e) {
-        setPosition(e.latlng);
-        map.flyTo(e.latlng, map.getZoom());
-      },
-    });
+  const { findUser, setFindUser } = useContext(EqaiContext);
 
-    return position === null ? null : (
-      <Marker position={position}>
-        <Popup>You are here</Popup>
-      </Marker>
-    );
+  function handleLocate() {
+    return setFindUser(!findUser);
   }
-
-
   return (
-    <SMap>
-      <MapContainer
-        center={[50.629, 3.057]}
-        zoom={13}
-        scrollWheelZoom
-        zoomControl={false}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[50.629, 3.057]}>
-          <Popup>
-            Vous êtes ici. <br /> Bienvenue à Lille.
-          </Popup>
-        </Marker>
-        <LocationMarker />
-      </MapContainer>
-    </SMap>
+    <>
+      <SMap>
+        <div id="map">
+          <nav>
+            <button
+              className="bn632-hover bn18"
+              type="button"
+              id="locateButton"
+              onClick={handleLocate}
+            >
+              <span>Locate me</span>
+            </button>
+          </nav>
+
+          <MapContainer
+            center={[50.629, 3.057]}
+            zoom={13}
+            scrollWheelZoom
+            zoomControl={false}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+
+            <LocateUsers />
+          </MapContainer>
+        </div>
+      </SMap>
+    </>
   );
 }
