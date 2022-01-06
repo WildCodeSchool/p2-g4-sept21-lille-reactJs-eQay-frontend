@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Marker, Popup, useMap } from 'react-leaflet';
 import { useContext, useEffect, useState } from 'react';
 import EqaiContext from '../../Context/EqaiContext';

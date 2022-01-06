@@ -53,6 +53,7 @@ export default function Map() {
 
             <LocateUsers />
             {showExtSensor ? <ExtSensor /> : null}
+
           </MapContainer>
         </div>
       </SMap>
