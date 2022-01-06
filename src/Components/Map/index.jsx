@@ -1,4 +1,3 @@
-
 import {
   MapContainer,
   TileLayer,
@@ -13,11 +12,17 @@ import SMap from './style';
 import LocateUsers from '../LocateUser';
 
 export default function Map() {
-  const { findUser, setFindUser } = useContext(EqaiContext);
+  const { findUser, setFindUser, showExtSensor, setShowExtSensor } =
+    useContext(EqaiContext);
 
   function handleLocate() {
     return setFindUser(!findUser);
   }
+
+  function handleExtSensor() {
+    setShowExtSensor(!showExtSensor);
+  }
+
   return (
     <>
       <SMap>
@@ -29,7 +34,15 @@ export default function Map() {
               id="locateButton"
               onClick={handleLocate}
             >
-              <span>Locate me</span>
+              <span>Localisation</span>
+            </button>
+            <button
+              className="bn632-hover bn18"
+              type="button"
+              id="ExtSensorButton"
+              onClick={handleExtSensor}
+            >
+              <span>Capteur exterieur</span>
             </button>
           </nav>
 
@@ -46,6 +59,7 @@ export default function Map() {
             />
             <MarkerIndoor />
             <LocateUsers />
+            {showExtSensor && <ExtSensor />}
           </MapContainer>
         </div>
       </SMap>
