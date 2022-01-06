@@ -52,8 +52,7 @@ export default function Map() {
             />
 
             <LocateUsers />
-            {showExtSensor ? <ExtSensor /> : null}
-
+            {showExtSensor && <ExtSensor />}
           </MapContainer>
         </div>
       </SMap>
