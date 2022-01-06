@@ -1,15 +1,10 @@
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMapEvents,
-} from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import { useContext } from 'react';
 import MarkerIndoor from '../MarkerIndoor';
-import { useState, useContext } from 'react';
 import EqaiContext from '../../Context/EqaiContext';
 import SMap from './style';
 import LocateUsers from '../LocateUser';
+import ExtSensor from '../ExtSensor';
 
 export default function Map() {
   const { findUser, setFindUser, showExtSensor, setShowExtSensor } =
@@ -46,7 +41,6 @@ export default function Map() {
             </button>
           </nav>
 
-
           <MapContainer
             center={[50.629, 3.057]}
             zoom={13}
@@ -64,6 +58,5 @@ export default function Map() {
         </div>
       </SMap>
     </>
-
   );
 }
