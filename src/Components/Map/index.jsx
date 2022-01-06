@@ -45,7 +45,6 @@ export default function Map() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <MarkerIndoor />
-             <LocationMarker />
             <LocateUsers />
           </MapContainer>
         </div>
