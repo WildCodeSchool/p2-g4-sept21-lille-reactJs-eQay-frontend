@@ -15,7 +15,6 @@ function App() {
       <GlobalStyles />
       <BurgerMenu />
       <Map />
-      <h1> Hello !</h1>
     </EqaiContext.Provider>
   );
 }
