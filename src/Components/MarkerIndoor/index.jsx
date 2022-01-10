@@ -42,8 +42,8 @@ export default function MarkerIndoor() {
             position={[e[0].adresses_latitude, e[0].adresses_longitude]}
             icon={iconeair}
           >
-            <SPopup>
-              <Popup>
+            <Popup>
+              <SPopup>
                 <ul>
                   <li>Aqi : {e[0].aqi}</li>
                   <li>Pm1 : {e[0].pm1}</li>
@@ -54,8 +54,8 @@ export default function MarkerIndoor() {
                   <li>Date : {e[0].timestamp}</li>
                   <li>Humidité : {e[0].humidity}</li>
                 </ul>
-              </Popup>
-            </SPopup>
+              </SPopup>
+            </Popup>
           </Marker>
         );
       })}
