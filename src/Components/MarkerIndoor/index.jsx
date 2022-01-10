@@ -5,6 +5,7 @@ import iconeAir from 'assets/greenAir.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import SPopup from './style';
+import './index.css';
 
 const iconeair = new L.Icon({
   iconUrl: iconeAir,
@@ -24,7 +25,17 @@ export default function MarkerIndoor() {
     }
   }, []);
   return (
-    <MarkerIndoorGroup>
+    <MarkerIndoorGroup
+      showCoverageOnHover={false}
+      spiderfyDistanceMultiplier={2}
+      iconCreateFunction={(cluster) => {
+        return L.divIcon({
+          html: `<span>${cluster.getChildCount()}</span>`,
+          className: 'marker-cluster-custom',
+          iconSize: L.point(40, 40, true),
+        });
+      }}
+    >
       {allDataIndoors.map((e) => {
         return (
           <Marker

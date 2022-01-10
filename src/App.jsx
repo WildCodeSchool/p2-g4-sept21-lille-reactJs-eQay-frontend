@@ -1,21 +1,11 @@
-import { useState } from 'react';
-import GlobalStyles from 'style';
-import BurgerMenu from './Components/BurgerMenu';
-import EqaiContext from './Context/EqaiContext';
-import Map from './Components/Map';
+import HomePage from 'Components/HomePage';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [findUser, setFindUser] = useState(false);
-  const [showExtSensor, setShowExtSensor] = useState(false);
-
   return (
-    <EqaiContext.Provider
-      value={{ findUser, setFindUser, showExtSensor, setShowExtSensor }}
-    >
-      <GlobalStyles />
-      <BurgerMenu />
-      <Map />
-    </EqaiContext.Provider>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
   );
 }
 
