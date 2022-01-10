@@ -1,9 +1,8 @@
 import { useState } from 'react';
+import GlobalStyles from 'style';
 import BurgerMenu from './Components/BurgerMenu';
 import EqaiContext from './Context/EqaiContext';
-
 import Map from './Components/Map';
-import 'reset-css';
 
 function App() {
   const [findUser, setFindUser] = useState(false);
@@ -13,6 +12,7 @@ function App() {
     <EqaiContext.Provider
       value={{ findUser, setFindUser, showExtSensor, setShowExtSensor }}
     >
+      <GlobalStyles />
       <BurgerMenu />
       <Map />
     </EqaiContext.Provider>
