@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import L from 'leaflet';
-import iconeAir from 'assets/iconeair.svg';
+import iconeAir from 'assets/greenAir.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import SPopup from './style';
