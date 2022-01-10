@@ -1,11 +1,12 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import L from 'leaflet';
 import iconeAir from 'assets/greenAir.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import SPopup from './style';
 import './index.css';
+import EqaiContext from '../../Context/EqaiContext';
 
 const iconeair = new L.Icon({
   iconUrl: iconeAir,
@@ -14,6 +15,7 @@ const iconeair = new L.Icon({
 
 export default function MarkerIndoor() {
   const [allDataIndoors, setAllDataIndoors] = useState([]);
+  const { filterValue } = useContext(EqaiContext);
 
   useEffect(() => {
     try {
@@ -45,11 +47,11 @@ export default function MarkerIndoor() {
             <Popup>
               <SPopup>
                 <ul>
-                  <li>Aqi : {e[0].aqi}</li>
-                  <li>Pm1 : {e[0].pm1}</li>
-                  <li>Pm10 : {e[0].pm10}</li>
-                  <li>Pm25 : {e[0].pm25}</li>
-                  <li>Ppm : {e[0].ppm}</li>
+                  {filterValue === 'Aqi' ? <li>Aqi : {e[0].aqi}</li> : null}
+                  {filterValue === 'Pm1' ? <li>Pm1 : {e[0].pm1}</li> : null}
+                  {filterValue === 'Pm10' ? <li>Pm10 : {e[0].pm10}</li> : null}
+                  {filterValue === 'Pm25' ? <li>Pm25 : {e[0].pm25}</li> : null}
+                  {filterValue === 'Ppm' ? <li>Ppm : {e[0].ppm}</li> : null}
                   <li>Température : {e[0].temperature}</li>
                   <li>Date : {e[0].timestamp}</li>
                   <li>Humidité : {e[0].humidity}</li>
