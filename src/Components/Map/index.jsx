@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { useContext } from 'react';
+import Filter from 'Components/Filter';
 import MarkerIndoor from '../MarkerIndoor';
 import EqaiContext from '../../Context/EqaiContext';
 import SMap from './style';
@@ -39,6 +40,7 @@ export default function Map() {
             >
               <span>Capteur exterieur</span>
             </button>
+            <Filter />
           </nav>
 
           <MapContainer
