@@ -5,6 +5,7 @@ import iconeAir from 'assets/iconeair.svg';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import SPopup from './style';
+import './index.css';
 
 const iconeair = new L.Icon({
   iconUrl: iconeAir,
@@ -24,15 +25,25 @@ export default function MarkerIndoor() {
     }
   }, []);
   return (
-    <MarkerIndoorGroup>
+    <MarkerIndoorGroup
+      showCoverageOnHover={false}
+      spiderfyDistanceMultiplier={2}
+      iconCreateFunction={(cluster) => {
+        return L.divIcon({
+          html: `<span>${cluster.getChildCount()}</span>`,
+          className: 'marker-cluster-custom',
+          iconSize: L.point(40, 40, true),
+        });
+      }}
+    >
       {allDataIndoors.map((e) => {
         return (
           <Marker
             position={[e[0].adresses_latitude, e[0].adresses_longitude]}
             icon={iconeair}
           >
-            <Popup>
-              <SPopup>
+            <SPopup>
+              <Popup>
                 <ul>
                   <li>Aqi : {e[0].aqi}</li>
                   <li>Pm1 : {e[0].pm1}</li>
@@ -43,8 +54,8 @@ export default function MarkerIndoor() {
                   <li>Date : {e[0].timestamp}</li>
                   <li>Humidité : {e[0].humidity}</li>
                 </ul>
-              </SPopup>
-            </Popup>
+              </Popup>
+            </SPopup>
           </Marker>
         );
       })}
