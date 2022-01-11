@@ -3,22 +3,39 @@ import SRadio from './style';
 import EqaiContext from '../../Context/EqaiContext';
 
 export default function Filter() {
-  const { filterValue, setFilterValue } = useContext(EqaiContext);
+  const { setFilterValue } = useContext(EqaiContext);
 
   return (
-    <SRadio>
-      <div
-        onChange={(e) => {
-          setFilterValue(e.target.value);
-        }}
-      >
-        <input type="radio" value="aqi" name="gender" /> Aqi
-        <input type="radio" value="pm1" name="gender" /> Pm1
-        <input type="radio" value="pm10" name="gender" /> Pm10
-        <input type="radio" value="pm25" name="gender" /> Pm25
-        <input type="radio" value="ppm" name="gender" /> Ppm
-        <div>{filterValue}</div>
-      </div>
+    <SRadio
+      onChange={(e) => {
+        setFilterValue(e.target.value);
+      }}
+    >
+      <label htmlFor="rad" className="rad-label">
+        <input type="radio" className="rad-input" name="rad" value="aqi" />
+        <div className="rad-design" />
+        <div className="rad-text">Aqi</div>
+      </label>
+      <label htmlFor="rad" className="rad-label">
+        <input type="radio" className="rad-input" name="rad" value="pm1" />
+        <div className="rad-design" />
+        <div className="rad-text">Pm1</div>
+      </label>
+      <label htmlFor="rad" className="rad-label">
+        <input type="radio" className="rad-input" name="rad" value="pm25" />
+        <div className="rad-design" />
+        <div className="rad-text">Pm25</div>
+      </label>
+      <label htmlFor="rad" className="rad-label">
+        <input type="radio" className="rad-input" name="rad" value="pm10" />
+        <div className="rad-design" />
+        <div className="rad-text">Pm10</div>
+      </label>
+      <label htmlFor="rad" className="rad-label">
+        <input type="radio" className="rad-input" name="rad" value="ppm" />
+        <div className="rad-design" />
+        <div className="rad-text">Ppm</div>
+      </label>
     </SRadio>
   );
 }
