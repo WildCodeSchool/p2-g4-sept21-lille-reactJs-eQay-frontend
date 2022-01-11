@@ -31,11 +31,11 @@ export default function AboutUs() {
   }, []);
   return (
     <AboutPage>
-      <main className="container">
-        <section className="pageTitle">
+      <main>
+        <section className="pageTitle container">
           <h1>Qui sommes-nous?</h1>
         </section>
-        <section className="whyCreatead">
+        <section className="whyCreatead container">
           <h2 data-aos="fade-up">Pourquoi avoir créé eQAI ? </h2>
           <p>
             Nous avons créé l&#39;association à but non lucratif (loi 1901) eQAI

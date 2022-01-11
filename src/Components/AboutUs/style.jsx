@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 const AboutPage = styled.div`
+  
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+  
   .container {
     width: 90%;
     margin: 0 auto;
     font-size: 1.3rem;
+    font-family: 'Indie Flower', cursive;
   }
   h1 {
     font-size: 3.5rem;
