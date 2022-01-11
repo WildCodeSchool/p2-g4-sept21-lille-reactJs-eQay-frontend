@@ -17,9 +17,18 @@ import volunteers from 'assets/1554288633350.jpg';
 import sensors from 'assets/sensors.JPEG';
 import happyChild from 'assets/happyChild.png';
 import greenBuildings from 'assets/La-pollution-de-l-air-interieur-touche-les-ecoconstructions1.jpg';
+
+import { useEffect } from 'react';
+import AOS from 'aos';
 import AboutPage from './style';
+import 'aos/dist/aos.css';
 
 export default function AboutUs() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <AboutPage>
       <main className="container">
@@ -27,7 +36,7 @@ export default function AboutUs() {
           <h1>Qui sommes-nous?</h1>
         </section>
         <section className="whyCreatead">
-          <h2>Pourquoi avoir créé eQAI ? </h2>
+          <h2 data-aos="fade-up">Pourquoi avoir créé eQAI ? </h2>
           <p>
             Nous avons créé l&#39;association à but non lucratif (loi 1901) eQAI
             car nous souhaitons fédérer toutes les personnes et organisations
@@ -46,7 +55,10 @@ export default function AboutUs() {
             <span>Car</span> oui, notre santé commence par l&#39;air que nous
             respirons !
           </h3>
-          <figure className="illustrationPicture flexCenter marginBottom">
+          <figure
+            className="illustrationPicture flexCenter marginBottom"
+            data-aos="fade-up"
+          >
             <img
               src={indoorPollution}
               alt="pollution intérieur"
