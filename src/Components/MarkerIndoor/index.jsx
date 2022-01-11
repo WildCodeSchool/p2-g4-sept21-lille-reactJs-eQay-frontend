@@ -50,15 +50,12 @@ export default function MarkerIndoor() {
 
   function switchIcon(value) {
     if (value <= 0) {
-      console.log('coucou');
       return greyAirIcon;
     }
     if (filterValue === 'aqi' && value > 50) {
-      console.log('coucou2');
       return greenAirIcon;
     }
     if (filterValue === 'aqi' && value < 50) {
-      console.log('coucou3');
       return redAirIcon;
     }
     if (filterValue === 'pm1' && value < 50) {
@@ -88,10 +85,8 @@ export default function MarkerIndoor() {
 
     return yellowAirIcon;
   }
-  console.log(filterValue);
   return (
     <MarkerIndoorGroup
-      showCoverageOnHover={false}
       spiderfyDistanceMultiplier={1}
       iconCreateFunction={(cluster) => {
         return L.divIcon({
@@ -126,9 +121,11 @@ export default function MarkerIndoor() {
                   {filterValue === 'ppm' ? (
                     <li>Ppm : {parseInt(e[0].ppm, 10)}</li>
                   ) : null}
-                  <li>Température : {parseInt(e[0].temperature, 10)}</li>
+                  {e[0].temperature && (
+                    <li>Température : {parseInt(e[0].temperature, 10)}</li>
+                  )}
                   <li>Date : {e[0].timestamp}</li>
-                  <li>Humidité : {e[0].humidity}</li>
+                  {e[0].humidity && <li>Humidité : {e[0].humidity}</li>}
                 </ul>
               </SPopup>
             </Popup>
