@@ -8,16 +8,25 @@ import innerPart from 'assets/Pollution-interieure.jpg';
 import stopCovid from 'assets/sifr_cov14_2_std.lang.all.jpg';
 import coronavirus from 'assets/coronavirus.png';
 import erp from 'assets/erp.png';
+import moreInformations from 'assets/info.png';
+import allTogether from 'assets/5-astuces-pour-améliorer-la-communauté-de-son-blog.jpg';
+import indoorAir from 'assets/pollution_interieur.jpg';
+import maskedChild from 'assets/unnamed.jpg';
+import openData from 'assets/89_1079_open_data_large.jpg';
+import volunteers from 'assets/1554288633350.jpg';
+import sensors from 'assets/sensors.JPEG';
+import happyChild from 'assets/happyChild.png';
+import greenBuildings from 'assets/La-pollution-de-l-air-interieur-touche-les-ecoconstructions1.jpg';
 import AboutPage from './style';
 
 export default function AboutUs() {
   return (
     <AboutPage>
       <main className="container">
-        <section className="page-title">
+        <section className="pageTitle">
           <h1>Qui sommes-nous?</h1>
         </section>
-        <section className="why-createad">
+        <section className="whyCreatead">
           <h2>Pourquoi avoir créé eQAI ? </h2>
           <p>
             Nous avons créé l&#39;association à but non lucratif (loi 1901) eQAI
@@ -25,8 +34,8 @@ export default function AboutUs() {
             voulant participer à la création de la première carte interactive de
             la pollution de l&#39;air intérieur des bâtiments.
           </p>
-          <figure className="illustration-picture">
-            <img src={map} alt="carte" className="total-width" />
+          <figure className="illustrationPicture">
+            <img src={map} alt="carte" className="totalWidth" />
           </figure>
           <p className="middle">
             Accessible à toute et tous, gratuite, elle est un véritable outil de
@@ -37,35 +46,39 @@ export default function AboutUs() {
             <span>Car</span> oui, notre santé commence par l&#39;air que nous
             respirons !
           </h3>
-          <figure className="illustration-picture flex margin-bottom">
+          <figure className="illustrationPicture flexCenter marginBottom">
             <img
               src={indoorPollution}
               alt="pollution intérieur"
-              className="resize-photo"
+              className="resizePhoto"
             />
             <img
               src={publicHealth}
               alt="santé publique france"
-              className="resize-photo"
+              className="resizePhoto"
             />
           </figure>
-          <figure className="illustration-picture middle margin-bottom">
+          <figure className="illustrationPicture middle marginBottom">
             <img
               src={didYouKnow}
               alt="Le saviez-vous"
-              className="border-half"
+              className="border-half resizePhoto"
             />
           </figure>
-          <p className="italic middle margin-bottom">
+          <p className="italic middle marginBottom">
             En moyenne nous passons quotidiennement 80% de notre temps à
             l&#39;intérieur de bâtiments dans lesquels l&#39;air que nous
             respirons peut être jusqu&#39;à 10x plus pollué qu&#39;à
             l&#39;extérieur.
           </p>
-          <figure className="illustration-picture margin-bottom">
-            <img src={sources} alt="carte" className="total-width" />
+          <figure className="illustrationPicture marginBottom">
+            <img
+              src={sources}
+              alt="Sources de pollution de l'air intérieur"
+              className="totalWidth"
+            />
           </figure>
-          <p className="margin-bottom">
+          <p className="marginBottom">
             eQAI propose une réponse collective et communautaire quant aux
             obligations réglementaires et relative à la Qualité d’air des ERP,
             grâce a un suivi permanent des principaux polluants de l’air
@@ -75,54 +88,54 @@ export default function AboutUs() {
             sensible (articles L. 221-8 et R. 221-30 et suivants du code de
             l’environnement)
           </p>
-          <figure className="illustration-picture middle margin-bottom">
+          <figure className="illustrationPicture middle marginBottom">
             <img
               src={cloud}
               alt="Le saviez-vous"
-              className="resize-photo border"
+              className="resizePhoto border"
             />
           </figure>
-          <p className="margin-bottom">
+          <p className="marginBottom">
             D’autre part, la surveillance de la qualité d’air Intérieur permet
             de prévenir fondamental dans la prévention de la santé et des effets
             sanitaires induis par une pollution intérieure au quotidien.
           </p>
-          <figure className="illustration-picture margin-bottom">
-            <img src={innerPart} alt="carte" className="total-width" />
+          <figure className="illustrationPicture marginBottom">
+            <img src={innerPart} alt="carte" className="totalWidth" />
           </figure>
-          <p className="margin-bottom">
+          <p className="marginBottom">
             En effet De nombreuses études internationales mettent en évidence un
             lien entre les particules fines, le taux de CO2 et la transmission
             de tout type de virus dont la COVID-19.
           </p>
-          <figure className="illustration-picture flex margin-bottom">
+          <figure className="illustrationPicture flexCenter marginBottom">
             <img
               src={stopCovid}
               alt="pollution intérieur"
-              className="two-thirds border"
+              className="resizePhoto"
             />
             <img
               src={coronavirus}
               alt="santé publique france"
-              className="one-third "
+              className="resizePhoto"
             />
           </figure>
         </section>
         <section>
           <h2>La Réglementation QAI en France </h2>
         </section>
-        <p className="margin-bottom">
+        <p className="marginBottom">
           Récapitulatif des exigences portant suer la qualité d’air Intérieur au
           sein de ERP
         </p>
-        <figure className="illustration-picture margin-bottom">
-          <img src={erp} alt="carte" className="total-width" />
+        <figure className="illustrationPicture marginBottom">
+          <img src={erp} alt="carte" className="totalWidth" />
         </figure>
         <h3>Quels sont les ERP soumis à cette réglementation ? </h3>
-        <p className="margin-bottom">
+        <p className="marginBottom">
           Cette obligation s’applique notamment aux :{' '}
         </p>
-        <ul className="margin-bottom">
+        <ul className="marginBottom">
           <li>
             Établissements d&#39;accueil collectif d&#39;enfants de moins de six
             ans (crèches, halte-garderie, jardins d&#39;enfants, etc.) ;
@@ -141,7 +154,7 @@ export default function AboutUs() {
             l’action sociale et des familles).
           </li>
         </ul>
-        <p className="margin-bottom">
+        <p className="marginBottom">
           <span>A noter:</span> cette réglementation vise aussi bien les
           établissements publics, gérés par les collectivités (mairies,
           communautés de commune ou d’agglomération, département, région, etc.)
@@ -155,12 +168,12 @@ export default function AboutUs() {
           identifié, alors le gestionnaire de l’établissement sera la personne
           de référence pour le suivi de ces actions.
         </p>
-        <p className="margin-bottom">Une entrée en vigueur progressive</p>
-        <p className="margin-bottom">
+        <p className="marginBottom">Une entrée en vigueur progressive</p>
+        <p className="marginBottom">
           L’entrée en vigueur de ce nouveau dispositif est progressive et la
           surveillance devra être achevée avant le :{' '}
         </p>
-        <ul className="margin-bottom">
+        <ul className="marginBottom">
           <li>
             1er janvier 2018 pour les établissements d’accueil collectif
             d’enfants de moins de six ans, les écoles maternelles et les écoles
@@ -173,6 +186,126 @@ export default function AboutUs() {
           </li>
           <li>1er janvier 2023 pour les autres établissements visés.</li>
         </ul>
+        <figure className="flexCenter marginBottom">
+          <div>
+            <img
+              src={moreInformations}
+              alt="Plus d'information"
+              className="resizeSmallPhoto border"
+            />
+          </div>
+          <div className="flexColumn">
+            <a
+              href=" https://jurad-bat.net/collectivites/reglementation-QAI-france"
+              className="small-marginBottom"
+            >
+              https://jurad-bat.net/collectivites/reglementation-QAI-france
+            </a>
+            <a href="https://www.ecologie.gouv.fr/qualite-lair-interieur">
+              https://www.ecologie.gouv.fr/qualite-lair-interieur
+            </a>
+          </div>
+        </figure>
+        <p className="marginBottom">
+          Parce qu’une meilleur qualité d’air est une priorité et qu’il est
+          possible d’agir ensemble.
+          <br />
+          <br />
+          Rejoignez la communauté eQAI pour agir collectivement face à une
+          problématique reconnue de santé publique.
+        </p>
+        <figure className="illustrationPicture">
+          <img src={allTogether} alt="Tous ensemble" className="totalWidth" />
+        </figure>
+        <p className="marginBottom">
+          Seul on va plus vite, mais ensemble on va plus loin !! Nous avons
+          besoin d’une association la plus large possible.
+          <br />
+          <br />
+          Le modèle associatif a été choisi pour regrouper et agir plus
+          facilement qu&#39;au travers d&#39;une société potentiellement jugée
+          partie. Les pouvoirs publics ne peuvent également et légitimement pas
+          porté cette mission et charge de surveillance.
+        </p>
+        <section className="whyEqai">
+          <h2>Que signifie eQAI ? </h2>
+          <p className="marginBottom">
+            &#34;e&#34; pour le digital et &#34;QAI&#34; pour Qualité d&#39;Air
+            Intérieur.
+          </p>
+          <figure className="illustrationPicture flexCenter marginBottom">
+            <img
+              src={indoorAir}
+              alt="Qualité d'Air Intérieur"
+              className="resizePhoto"
+            />
+            <img
+              src={maskedChild}
+              alt="enfant masqué "
+              className="resizePhoto"
+            />
+          </figure>
+          <h3>Présentation de l&#39;association </h3>
+          <p className="marginBottom">
+            L&#39;association œuvre dans le monde digital en collectant les
+            mesures de qualité d&#39;air effectuées par ses adhérents. Ces
+            données sont anonymisées puis proposées en open source à toutes
+            personnes et organisations ayant le même objectif.
+          </p>
+          <figure className="illustrationPicture middle marginBottom">
+            <img src={openData} alt="open Data" className="resizePhoto" />
+          </figure>
+          <p className="marginBottom">
+            Des bénévoles en informatique codent un programme qui est
+            régulièrement adapté en fonction du modèle de données qui nous est
+            proposé. Nous accueillons toutes les personnes physiques et morales
+            avec une compétence en informatique, droit ou communication !
+          </p>
+          <figure className="illustrationPicture middle marginBottom">
+            <img src={volunteers} alt="bénévoles" className="resizePhoto" />
+          </figure>
+          <p className="marginBottom">
+            La gestion de la base des adhérents est facilitée par HelloAsso.
+          </p>
+        </section>
+        <section className="founders">
+          <h2>Les fondateurs</h2>
+          <p className="marginBottom">
+            Cédric Brugnon et Guillaume Frémion ont travaillé pendant des années
+            à la réduction de la consommation d&#39;énergie des bâtiments et se
+            sont lancés dans cette problématiques sanitaire mondiale.
+            <br />
+            <br />
+            <br />
+            &#34;Nos parcours salariaux dans des filiales de grands groupes
+            énergétiques nous ont convaincu de vouloir une structure légère et
+            efficace.
+            <br />
+            <br />
+            <br />
+            Nous entreprenons en parallèle avec la création de BATeMOB qui est
+            une société qui propose des tableaux de bord de qualité d&#39;air et
+            énergie pour faciliter le passage à l&#39;action des propriétaires
+            des bâtiments collectifs (publics et privés) et dans le projet Le
+            Capteur Français qui créé des objets électroniques utiles à la
+            compréhension de notre environnement&#34;
+          </p>
+          <figure className="illustrationPicture flexCenter marginBottom">
+            <img src={sensors} alt="capteurs" className="resizePhoto" />
+            <img
+              src={happyChild}
+              alt="un enfant heureux"
+              className="resizePhoto"
+            />
+          </figure>
+          <figure className="illustrationPicture middle marginBottom">
+            <img
+              src={greenBuildings}
+              alt="Batiments végétalisés"
+              className="border-half resizePhoto"
+            />
+          </figure>
+        </section>
       </main>
     </AboutPage>
   );

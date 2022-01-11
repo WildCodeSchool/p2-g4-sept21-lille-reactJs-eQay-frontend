@@ -37,20 +37,19 @@ const AboutPage = styled.div`
   .italic {
     font-style: italic;
   }
-  .illustration-picture {
+  .illustrationPicture {
     width: 100%;
   }
-  .total-width {
+  .totalWidth {
     margin: 2rem 0;
     width: 100%;
   }
-  .one-third {
-    width: 33.33%;
+  .flexColumn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
-  .two-third {
-    width: 66.67%;
-  }
-  .flex {
+  .flexCenter {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -58,19 +57,50 @@ const AboutPage = styled.div`
   .middle {
     text-align: center;
   }
-  .border-half {
+  .borderHalf {
     border-radius: 50%;
   }
   .border {
     border-radius: 10rem;
   }
-  .margin-bottom {
+  .marginBottom {
     margin-bottom: 3rem;
   }
-  .resize-photo {
+  .smallMarginBottom {
+    margin-bottom: 1rem;
+  }
+  .resizePhoto {
     height: 400px;
     width: auto;
   }
+  .resizeSmallPhoto {
+    height: 100px;
+    width: auto;
+  }
+
+  @media only screen and (max-width: 1250px) {
+    .resizePhoto {
+      height: 200px;
+      width: auto;
+    }
+    @media only screen and (max-width: 700px) {
+      .resizePhoto {
+        height: 150px;
+        width: auto;
+      }
+      @media only screen and (max-width: 400px) {
+        .resizePhoto {
+          height: 100px;
+          width: auto;
+        }
+        .resizeSmallPhoto {
+          height: 50px;
+          width: auto;
+        }
+        .container {
+          font-size: 1rem;
+        }
+      }
 `;
 
 export default AboutPage;
