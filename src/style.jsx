@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --color-third: #a8dda8;
     --font-family: 'Dekko', cursive;
   }
-`;
+  
+  `;
 
 export default GlobalStyle;
