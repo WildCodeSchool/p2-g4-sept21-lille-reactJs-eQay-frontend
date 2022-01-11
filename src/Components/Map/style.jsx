@@ -6,6 +6,8 @@ const SMap = styled.div`
     margin: 2vh 3vw;
     right: 0;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
   }
   .bn632-hover {
     width: 160px;
