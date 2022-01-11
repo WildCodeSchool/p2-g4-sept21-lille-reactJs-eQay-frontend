@@ -6,19 +6,19 @@ export default function BurgerMenu() {
   return (
     <>
       <Menu>
-        <Link id="home" className="menu-item" to="/">
+        <Link id="home" className="menuItem" to="/">
           Carte
         </Link>
-        <Link id="news" className="menu-item" to="/news">
+        <Link id="news" className="menuItem" to="/news">
           Infos
         </Link>
-        <Link id="events" className="menu-item" to="/events">
+        <Link id="events" className="menuItem" to="/events">
           Evénements
         </Link>
-        <Link id="goodpractices" className="menu-item" to="/goodpractices">
+        <Link id="goodpractices" className="menuItem" to="/goodpractices">
           Bonnes pratiques
         </Link>
-        <Link id="about" className="menu-item" to="/aboutus">
+        <Link id="about" className="menuItem" to="/aboutus">
           Qui sommes-nous?
         </Link>
       </Menu>
