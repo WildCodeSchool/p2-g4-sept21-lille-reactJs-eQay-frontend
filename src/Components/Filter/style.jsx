@@ -4,7 +4,7 @@ const SRadio = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  .rad-label {
+  .radLabel {
     width: 128px;
     display: flex;
     align-items: center;
@@ -18,12 +18,12 @@ const SRadio = styled.div`
     transition: 0.3s;
   }
 
-  .rad-label:hover,
-  .rad-label:focus-within {
+  .radLabel:hover,
+  .radLabel:focus-within {
     background: hsla(0, 0%, 80%, 0.54);
   }
 
-  .rad-input {
+  .radInput {
     position: absolute;
     left: 0;
     top: 0;
@@ -33,7 +33,7 @@ const SRadio = styled.div`
     z-index: -1;
   }
 
-  .rad-design {
+  .radDesign {
     width: 22px;
     height: 22px;
     border-radius: 100px;
@@ -46,7 +46,7 @@ const SRadio = styled.div`
     position: relative;
   }
 
-  .rad-design::before {
+  .radDesign::before {
     content: '';
 
     display: inline-block;
@@ -59,11 +59,11 @@ const SRadio = styled.div`
     transition: 0.3s;
   }
 
-  .rad-input:checked + .rad-design::before {
+  .radInput:checked + .radDesign::before {
     transform: scale(0);
   }
 
-  .rad-text {
+  .radText {
     color: hsl(0, 0%, 60%);
     margin-left: 14px;
     letter-spacing: 3px;
@@ -74,7 +74,7 @@ const SRadio = styled.div`
     transition: 0.3s;
   }
 
-  .rad-input:checked ~ .rad-text {
+  .radInput:checked ~ .radText {
     color: hsl(0, 0%, 40%);
   }
 `;

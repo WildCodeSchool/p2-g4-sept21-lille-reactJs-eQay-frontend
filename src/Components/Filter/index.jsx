@@ -11,30 +11,30 @@ export default function Filter() {
         setFilterValue(e.target.value);
       }}
     >
-      <label htmlFor="rad" className="rad-label">
-        <input type="radio" className="rad-input" name="rad" value="aqi" />
-        <div className="rad-design" />
-        <div className="rad-text">Aqi</div>
+      <label htmlFor="rad" className="radLabel">
+        <input type="radio" className="radInput" name="rad" value="aqi" />
+        <div className="radDesign" />
+        <div className="radText">Aqi</div>
       </label>
-      <label htmlFor="rad" className="rad-label">
-        <input type="radio" className="rad-input" name="rad" value="pm1" />
-        <div className="rad-design" />
-        <div className="rad-text">Pm1</div>
+      <label htmlFor="rad" className="radLabel">
+        <input type="radio" className="radInput" name="rad" value="pm1" />
+        <div className="radDesign" />
+        <div className="radText">Pm1</div>
       </label>
-      <label htmlFor="rad" className="rad-label">
-        <input type="radio" className="rad-input" name="rad" value="pm25" />
-        <div className="rad-design" />
-        <div className="rad-text">Pm25</div>
+      <label htmlFor="rad" className="radLabel">
+        <input type="radio" className="radInput" name="rad" value="pm25" />
+        <div className="radDesign" />
+        <div className="radText">Pm25</div>
       </label>
-      <label htmlFor="rad" className="rad-label">
-        <input type="radio" className="rad-input" name="rad" value="pm10" />
-        <div className="rad-design" />
-        <div className="rad-text">Pm10</div>
+      <label htmlFor="rad" className="radLabel">
+        <input type="radio" className="radInput" name="rad" value="pm10" />
+        <div className="radDesign" />
+        <div className="radText">Pm10</div>
       </label>
-      <label htmlFor="rad" className="rad-label">
-        <input type="radio" className="rad-input" name="rad" value="ppm" />
-        <div className="rad-design" />
-        <div className="rad-text">Ppm</div>
+      <label htmlFor="rad" className="radLabel">
+        <input type="radio" className="radInput" name="rad" value="ppm" />
+        <div className="radDesign" />
+        <div className="radText">Ppm</div>
       </label>
     </SRadio>
   );
