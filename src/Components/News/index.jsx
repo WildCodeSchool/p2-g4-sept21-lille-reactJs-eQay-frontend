@@ -1,3 +1,12 @@
+import BurgerMenu from 'Components/BurgerMenu';
+import GlobalStyle from 'style';
+
 export default function News() {
-  return <h1> Infos</h1>;
+  return (
+    <>
+      <GlobalStyle />
+      <BurgerMenu />
+      <h1> Infos</h1>
+    </>
+  );
 }

@@ -1,3 +1,12 @@
+import BurgerMenu from 'Components/BurgerMenu';
+import GlobalStyle from 'style';
+
 export default function AboutUs() {
-  return <h1> Qui sommes nous ?</h1>;
+  return (
+    <>
+      <GlobalStyle />
+      <BurgerMenu />
+      <h1> Qui sommes nous ?</h1>
+    </>
+  );
 }
