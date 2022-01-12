@@ -27,10 +27,35 @@ export default function Footer() {
       <section className="followUsFooter">
         <h3 className="titleFollow">Suivez-nous</h3>
         <div className="logoFooter">
-          <img className="socialFooter" src={Facebook} alt="Facebook" />
-          <img className="socialFooter" src={Insta} alt="Instagram" />
-          <img className="socialFooter" src={Twitter} alt="Twitter" />
-          <img className="socialFooter" src={LinkedIn} alt="LinkedIn" />
+          <a
+            href="https://www.facebook.com/eqai.asso"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="socialFooter" src={Facebook} alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/eqai.association/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            <img className="socialFooter" src={Insta} alt="Instagram" />
+          </a>
+          <a
+            href="https://twitter.com/eQAIassociation"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="socialFooter" src={Twitter} alt="Twitter" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/eqai/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="socialFooter" src={LinkedIn} alt="LinkedIn" />
+          </a>
         </div>
       </section>
     </footer>
