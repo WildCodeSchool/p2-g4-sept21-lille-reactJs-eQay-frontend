@@ -6,9 +6,18 @@ import Map from 'Components/Map';
 export default function HomePage() {
   const [findUser, setFindUser] = useState(false);
   const [showExtSensor, setShowExtSensor] = useState(false);
+  const [filterValue, setFilterValue] = useState('aqi');
+
   return (
     <EqaiContext.Provider
-      value={{ findUser, setFindUser, showExtSensor, setShowExtSensor }}
+      value={{
+        findUser,
+        setFindUser,
+        showExtSensor,
+        setShowExtSensor,
+        filterValue,
+        setFilterValue,
+      }}
     >
       <GlobalStyles />
       <Map />
