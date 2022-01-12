@@ -1,3 +1,12 @@
+import BurgerMenu from 'Components/BurgerMenu';
+import GlobalStyle from 'style';
+
 export default function Event() {
-  return <h1> Evénements</h1>;
+  return (
+    <>
+      <GlobalStyle />
+      <BurgerMenu />
+      <h1> Evénements</h1>
+    </>
+  );
 }

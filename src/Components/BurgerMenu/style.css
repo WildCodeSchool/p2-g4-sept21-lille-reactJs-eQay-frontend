@@ -7,20 +7,22 @@
 }
 
 .bm-burger-bars {
-  background: #373a47;
+  background: var(--color-secondary);
 }
 
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: var(--color-primary);
 }
 
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left: 250px;
 }
 
 .bm-cross {
-  background: #bdc3c7;
+  background: var(--color-secondary);
 }
 
 .bm-menu-wrap {
@@ -29,11 +31,15 @@
 }
 
 .bm-menu {
-  background: #fff;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  background-color: white;
+  width: 95%;
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .bm-menu::-webkit-scrollbar {
@@ -46,15 +52,89 @@
 
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
 }
 
 .bm-item {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: var(--color-secondary);
+  margin: 30px 0;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.bm-item:hover {
+  color: white;
+  background-color: var(--color-primary);
 }
 
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.footerBurger {
+  display: flex;
+  pointer-events: none;
+  padding-top: 5%;
+}
+
+.followUs {
+  text-align: center;
+  padding-bottom: 8%;
+  font-size: 22px;
+}
+
+.imgLogo {
+  justify-content: space-evenly;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  padding-left: 8px;
+}
+
+.legalMention {
+  text-align: center;
+  padding-top: 20%;
+}
+
+.copyright {
+  font-style: italic;
+  text-align: center;
+  padding: 12%;
+  font-size: 13px;
+}
+
+.copyrightYear {
+  font-weight: bolder;
+}
+
+/* mode mobile */
+@media only screen and (max-width: 768px) {
+  .bm-menu {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  .bm-cross-button {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: 90vw;
+  }
+
+  .footerBurger {
+    display: flex;
+    pointer-events: none;
+  }
+
+  .followUs {
+    padding-bottom: 8px;
+    font-size: 30px;
+  }
+
+  .copyright {
+    padding: 10%;
+  }
 }
