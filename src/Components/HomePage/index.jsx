@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import GlobalStyles from 'style';
-import BurgerMenu from 'Components/BurgerMenu';
+import BurgerMenuMaps from 'Components/BurgerMenuMaps';
 import EqaiContext from 'Context/EqaiContext';
 import Map from 'Components/Map';
 
@@ -12,7 +12,7 @@ export default function HomePage() {
       value={{ findUser, setFindUser, showExtSensor, setShowExtSensor }}
     >
       <GlobalStyles />
-      <BurgerMenu />
+      <BurgerMenuMaps />
       <Map />
     </EqaiContext.Provider>
   );
