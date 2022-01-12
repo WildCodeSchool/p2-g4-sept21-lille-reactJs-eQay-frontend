@@ -8,6 +8,7 @@ import redAir from 'assets/redAir.png';
 import greyAir from 'assets/greyAir.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
+import Share from 'Components/ShareButton';
 import SPopup from './style';
 import './index.css';
 import EqaiContext from '../../Context/EqaiContext';
@@ -127,6 +128,8 @@ export default function MarkerIndoor() {
                   <li>Date : {e[0].timestamp}</li>
                   {e[0].humidity && <li>Humidité : {e[0].humidity}</li>}
                 </ul>
+                <h2>Partager</h2>
+                <Share data={e[0]} />
               </SPopup>
             </Popup>
           </Marker>
