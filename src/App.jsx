@@ -1,8 +1,8 @@
+import AboutUs from 'Components/AboutUs';
 import HomePage from 'Components/HomePage';
 import News from 'Components/News';
 import Event from 'Components/Event';
 import GoodPractices from 'Components/GoodPractices';
-import AboutUs from 'Components/AboutUs';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
