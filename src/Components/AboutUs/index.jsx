@@ -154,7 +154,7 @@ export default function AboutUs() {
         </section>
         <section>
           <h2 className="marginBottom middle">
-            La Réglementation QAI en France{' '}
+            La Réglementation QAI en France
           </h2>
           <p className="marginBottom middle">
             Récapitulatif des exigences portant suer la qualité d’air Intérieur
@@ -166,10 +166,10 @@ export default function AboutUs() {
         </section>
         <section className="erp backgroundGreen fontColorWhite textShadow">
           <h3 className="middle marginBottom" data-aos="fade-right">
-            Quels sont les ERP soumis à cette réglementation ?{' '}
+            Quels sont les ERP soumis à cette réglementation ?
           </h3>
           <p className="marginBottom container" data-aos="fade-right">
-            Cette obligation s’applique notamment aux :{' '}
+            Cette obligation s’applique notamment aux :
           </p>
           <ul className="marginBottom container" data-aos="fade-left">
             <li>
@@ -180,7 +180,7 @@ export default function AboutUs() {
               Établissements d&#39;enseignement ou de formation professionnelle
               du premier et du second degrés (écoles maternelles, élémentaires,
               collèges, lycées généraux et professionnels, établissements
-              régionaux d&#39;enseignement adapté) ;{' '}
+              régionaux d&#39;enseignement adapté) ;
             </li>
             <li>
               Établissements sanitaires et sociaux prenant en charge les mineurs
@@ -209,7 +209,7 @@ export default function AboutUs() {
           </p>
           <p className="marginBottom container" data-aos="fade-left">
             L’entrée en vigueur de ce nouveau dispositif est progressive et la
-            surveillance devra être achevée avant le :{' '}
+            surveillance devra être achevée avant le :
           </p>
           <ul className="marginBottom container" data-aos="fade-right">
             <li>
@@ -268,7 +268,7 @@ export default function AboutUs() {
         </section>
         <section className="whyEqai">
           <h2 className="middle" data-aos="fade-left">
-            Que signifie eQAI ?{' '}
+            Que signifie eQAI ?
           </h2>
           <p className="marginBottom container" data-aos="fade-left">
             &#34;e&#34; pour le digital et &#34;QAI&#34; pour Qualité d&#39;Air
@@ -290,7 +290,7 @@ export default function AboutUs() {
             />
           </figure>
           <h3 className="middle marginBottom" data-aos="fade-left">
-            Présentation de l&#39;association{' '}
+            Présentation de l&#39;association
           </h3>
           <p className="marginBottom container" data-aos="fade-right">
             L&#39;association œuvre dans le monde digital en collectant les
