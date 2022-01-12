@@ -1,11 +1,15 @@
+import Mailto from 'Components/Mailto';
 import Facebook from 'assets/facebook.png';
 import Insta from 'assets/insta.png';
 import Twitter from 'assets/twitter.png';
 import LinkedIn from 'assets/linkedin.png';
+
+import SMailto from 'Components/Mailto/style';
 import './style.css';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <section className="listItemsFooter">
@@ -18,7 +22,9 @@ export default function Footer() {
         >
           Nous soutenir
         </a>
-        <h2 className="contactUs">Contactez-nous</h2>
+        <SMailto>
+          <Mailto email="contact@eqai.org" />
+        </SMailto>
         <h2 className="mentionLegal">Mentions légales</h2>
       </section>
       <h3 className="copyrightFooter">
