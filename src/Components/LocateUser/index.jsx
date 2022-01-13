@@ -11,7 +11,8 @@ export default function LocateUsers() {
     if (findUser) {
       map.locate().on('locationfound', function (e) {
         setPosition(e.latlng);
-        map.flyTo(e.latlng, map.getZoom());
+        // map.flyTo(e.latlng, map.getZoom());
+        map.setView([e.latlng.lat, e.latlng.lng], 14);
       });
       setFindUser(false);
     }
