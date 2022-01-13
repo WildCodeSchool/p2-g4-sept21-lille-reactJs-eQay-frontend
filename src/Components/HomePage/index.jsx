@@ -2,6 +2,7 @@ import { useState } from 'react';
 import GlobalStyles from 'style';
 import EqaiContext from 'Context/EqaiContext';
 import Map from 'Components/Map';
+import BurgerMenuMaps from 'Components/BurgerMenuMaps';
 
 export default function HomePage() {
   const [findUser, setFindUser] = useState(false);
@@ -20,6 +21,7 @@ export default function HomePage() {
       }}
     >
       <GlobalStyles />
+      <BurgerMenuMaps />
       <Map />
     </EqaiContext.Provider>
   );
