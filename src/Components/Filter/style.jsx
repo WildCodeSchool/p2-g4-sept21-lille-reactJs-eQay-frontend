@@ -56,6 +56,7 @@ const SRadio = styled.div`
 
   .radInput:checked + .radDesign::before {
     transform: scale(0);
+    background: red;
   }
 
   .radText {
