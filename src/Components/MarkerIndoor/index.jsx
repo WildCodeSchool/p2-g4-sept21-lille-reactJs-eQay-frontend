@@ -16,6 +16,7 @@ import EqaiContext from '../../Context/EqaiContext';
 const greenAirIcon = new L.Icon({
   iconUrl: greenAir,
   iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 
 const yellowAirIcon = new L.Icon({
