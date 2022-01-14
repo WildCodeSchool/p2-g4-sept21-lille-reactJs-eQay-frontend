@@ -3,7 +3,7 @@ import SRadio from './style';
 import EqaiContext from '../../Context/EqaiContext';
 
 export default function Filter() {
-  const { filterValue, setFilterValue } = useContext(EqaiContext);
+  const { setFilterValue } = useContext(EqaiContext);
 
   return (
     <SRadio
@@ -14,9 +14,9 @@ export default function Filter() {
       <label htmlFor="aqi" className="radLabel">
         <input
           type="radio"
-          className="radInput"
           id="aqi"
-          name="aqi"
+          className="radInput"
+          name="rad"
           value="aqi"
         />
         <div className="radDesign" />
@@ -25,9 +25,9 @@ export default function Filter() {
       <label htmlFor="pm1" className="radLabel">
         <input
           type="radio"
-          className="radInput"
           id="pm1"
-          name="aqi"
+          className="radInput"
+          name="rad"
           value="pm1"
         />
         <div className="radDesign" />
@@ -36,26 +36,37 @@ export default function Filter() {
       <label htmlFor="pm25" className="radLabel">
         <input
           type="radio"
-          className="radInput"
           id="pm25"
-          name="aqi"
+          className="radInput"
+          name="rad"
           value="pm25"
         />
         <div className="radDesign" />
         <div className="radText">Pm25</div>
         <div />
       </label>
-      {/* <label htmlFor="rad" className="radLabel">
-        <input type="radio" className="radInput" name="rad" value="pm10" />
+      <label htmlFor="pm10" className="radLabel">
+        <input
+          type="radio"
+          id="pm10"
+          className="radInput"
+          name="rad"
+          value="pm10"
+        />
         <div className="radDesign" />
         <div className="radText">Pm10</div>
       </label>
-      <label htmlFor="rad" className="radLabel">
-        <input type="radio" className="radInput" name="rad" value="ppm" />
+      <label htmlFor="ppm" className="radLabel">
+        <input
+          type="radio"
+          id="ppm"
+          className="radInput"
+          name="rad"
+          value="ppm"
+        />
         <div className="radDesign" />
         <div className="radText">Ppm</div>
-      </label> */}
-      <div>{filterValue}</div>
+      </label>
     </SRadio>
   );
 }

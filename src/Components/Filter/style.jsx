@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SRadio = styled.div`
+const SRadio = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
