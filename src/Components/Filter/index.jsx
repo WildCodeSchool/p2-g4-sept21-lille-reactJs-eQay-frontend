@@ -43,7 +43,6 @@ export default function Filter() {
         />
         <div className="radDesign" />
         <div className="radText">Pm25</div>
-        <div />
       </label>
       <label htmlFor="pm10" className="radLabel">
         <input
