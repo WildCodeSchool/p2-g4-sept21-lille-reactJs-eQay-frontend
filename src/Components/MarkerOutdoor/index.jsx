@@ -1,42 +1,19 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import L from 'leaflet';
-// import greenAirExt from 'assets/greenAirExt.png';
-// import yellowAirExt from 'assets/yellowAirExt.png';
-// import orangeAirExt from 'assets/orangeAirExt.png';
-import redAirExt from 'assets/redAirExt.png';
-// import greyAirExt from 'assets/greyAirExt.png';
+import blueAirExt from 'assets/blueAirExt.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import Share from 'Components/ShareButton';
 import SPopup from './style';
 import './index.css';
 
-// const greenAirIcon = new L.Icon({
-//   iconUrl: greenAir,
-//   iconSize: [25, 25],
-// });
-
-// const yellowAirIcon = new L.Icon({
-//   iconUrl: yellowAir,
-//   iconSize: [25, 25],
-// });
-// const orangeAirIcon = new L.Icon({
-//   iconUrl: orangeAir,
-//   iconSize: [25, 25],
-// });
 const redAirIcon = new L.Icon({
-  iconUrl: redAirExt,
+  iconUrl: blueAirExt,
   iconSize: [25, 25],
 });
-// const greyAirIcon = new L.Icon({
-//   iconUrl: greyAir,
-//   iconSize: [25, 25],
-// });
-
 export default function MarkerOutdoor() {
   const [allDataOutdoor, setAllDataOutdoor] = useState([]);
-
   useEffect(() => {
     try {
       axios.get('http://localhost:5050/indoor').then(({ data }) => {
@@ -46,44 +23,6 @@ export default function MarkerOutdoor() {
       console.log(error);
     }
   }, []);
-
-  // function switchIcon(value) {
-  //   if (value <= 0) {
-  //     return greyAirIcon;
-  //   }
-  //   if (filterValue === 'aqi' && value > 50) {
-  //     return greenAirIcon;
-  //   }
-  //   if (filterValue === 'aqi' && value < 50) {
-  //     return redAirIcon;
-  //   }
-  //   if (filterValue === 'pm1' && value < 50) {
-  //     return greenAirIcon;
-  //   }
-  //   if (filterValue === 'pm1' && value > 50) {
-  //     return redAirIcon;
-  //   }
-  //   if (filterValue === 'pm10' && value < 50) {
-  //     return greenAirIcon;
-  //   }
-  //   if (filterValue === 'pm10' && value > 50) {
-  //     return redAirIcon;
-  //   }
-  //   if (filterValue === 'pm25' && value < 50) {
-  //     return greenAirIcon;
-  //   }
-  //   if (filterValue === 'pm25' && value > 50) {
-  //     return redAirIcon;
-  //   }
-  //   if (filterValue === 'ppm' && value < 50) {
-  //     return greenAirIcon;
-  //   }
-  //   if (filterValue === 'ppm' && value > 50) {
-  //     return orangeAirIcon;
-  //   }
-
-  //   return yellowAirIcon;
-  // }
   return (
     <MarkerIndoorGroup
       spiderfyDistanceMultiplier={1}
