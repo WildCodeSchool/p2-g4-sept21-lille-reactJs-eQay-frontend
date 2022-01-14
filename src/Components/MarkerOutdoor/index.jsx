@@ -8,7 +8,7 @@ import Share from 'Components/ShareButton';
 import SPopup from './style';
 import './index.css';
 
-const redAirIcon = new L.Icon({
+const BlueAirIcon = new L.Icon({
   iconUrl: blueAirExt,
   iconSize: [25, 25],
 });
@@ -38,7 +38,7 @@ export default function MarkerOutdoor() {
         return e[0].type === 'Ext' ? (
           <Marker
             position={[e[0].adresses_latitude, e[0].adresses_longitude]}
-            icon={redAirIcon}
+            icon={BlueAirIcon}
             key={e[0].id}
           >
             <Popup>

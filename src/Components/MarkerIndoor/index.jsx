@@ -21,18 +21,22 @@ const greenAirIcon = new L.Icon({
 const yellowAirIcon = new L.Icon({
   iconUrl: yellowAir,
   iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 const orangeAirIcon = new L.Icon({
   iconUrl: orangeAir,
   iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 const redAirIcon = new L.Icon({
   iconUrl: redAir,
   iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 const greyAirIcon = new L.Icon({
   iconUrl: greyAir,
   iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 export default function MarkerIndoor() {
   const [allDataIndoors, setAllDataIndoors] = useState([]);
