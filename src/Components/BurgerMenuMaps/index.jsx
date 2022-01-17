@@ -5,6 +5,7 @@ import linkedIn from 'assets/linkedin.png';
 import insta from 'assets/insta.png';
 import twitter from 'assets/twitter.png';
 import './style.css';
+import Mailto from 'Components/Mailto';
 
 export default function BurgerMenuMaps() {
   const currentYear = new Date().getFullYear();
@@ -35,9 +36,9 @@ export default function BurgerMenuMaps() {
         >
           Nous soutenir
         </a>
-        <Link id="contactus" className="menuItem" to="/contactus">
-          Contactez-nous
-        </Link>
+        <div className="mailto">
+          <Mailto />
+        </div>
         <h2 className="followUs">Suivez-nous</h2>
         <section className="allLogo">
           <a
