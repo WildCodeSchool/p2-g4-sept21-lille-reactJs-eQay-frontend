@@ -38,19 +38,41 @@ export default function BurgerMenuMaps() {
         <Link id="contactus" className="menuItem" to="/contactus">
           Contactez-nous
         </Link>
-        <div className="footerBurger">
-          <h2 className="followUs">Suivez-nous</h2>
-          <section className="allLogo">
+        <h2 className="followUs">Suivez-nous</h2>
+        <section className="allLogo">
+          <a
+            href="https://www.facebook.com/eqai.asso"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img className="imgLogo" src={facebook} alt="facebook" />
+          </a>
+          <a
+            href="https://twitter.com/eQAIassociation"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img className="imgLogo" src={twitter} alt="twitter" />
+          </a>
+          <a
+            href="http://www.linkedin.com/company/eqai"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img className="imgLogo" src={linkedIn} alt="linkedin" />
+          </a>
+          <a
+            href="https://www.instagram.com/eqai.association/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img className="imgLogo" src={insta} alt="instagram" />
-          </section>
-          <h3 className="legalMention">Mentions légales</h3>
-          <h3 className="copyright">
-            Copyright <span className="copyrightYear"> {currentYear} </span>
-          </h3>
-        </div>
+          </a>
+        </section>
+        <h3 className="legalMention">Mentions légales</h3>
+        <h3 className="copyright">
+          Copyright <span className="copyrightYear"> {currentYear} </span>
+        </h3>
       </Menu>
     </>
   );
