@@ -31,8 +31,8 @@ export default function Map() {
           </nav>
 
           <MapContainer
-            center={[50.629, 3.057]}
-            zoom={13}
+            center={[46.227, 2.213]}
+            zoom={6}
             scrollWheelZoom
             zoomControl={false}
           >
