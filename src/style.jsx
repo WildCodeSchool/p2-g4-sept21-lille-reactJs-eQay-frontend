@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --color-primary: #28abb9;
     --color-secondary: #2d6187;
     --color-third: #a8dda8;
-    --font-family: 'Dekko', cursive;
+    --font-family: 'Dekko';
   }
   
   `;
