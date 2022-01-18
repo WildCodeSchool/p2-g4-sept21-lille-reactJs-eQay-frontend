@@ -14,11 +14,6 @@ const SSelect = styled.select`
     border: none;
     background-color: white;
     text-align: center;
-
-    option {
-      background: blue;
-      background-color: red;
-    }
   }
 `;
 
