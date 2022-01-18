@@ -112,22 +112,22 @@ export default function MarkerIndoor() {
                     <li>Aqi : {parseInt(e[0].aqi, 10)}</li>
                   ) : null}
                   {filterValue === 'pm1' ? (
-                    <li>Pm1 : {parseInt(e[0].pm1, 10)}</li>
+                    <li>Pm1 : {parseInt(e[0].pm1, 10)} µg/m3</li>
                   ) : null}
                   {filterValue === 'pm10' ? (
-                    <li>Pm10 : {parseInt(e[0].pm10, 10)}</li>
+                    <li>Pm10 : {parseInt(e[0].pm10, 10)} µg/m3</li>
                   ) : null}
                   {filterValue === 'pm25' ? (
-                    <li>Pm25 : {parseInt(e[0].pm25, 10)}</li>
+                    <li>Pm2,5 : {parseInt(e[0].pm25, 10)} µg/m3</li>
                   ) : null}
                   {filterValue === 'ppm' ? (
-                    <li>Ppm : {parseInt(e[0].ppm, 10)}</li>
+                    <li>Ppm : {parseInt(e[0].ppm, 10)} mg/kg</li>
                   ) : null}
                   {e[0].temperature && (
-                    <li>Température : {parseInt(e[0].temperature, 10)}</li>
+                    <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
                   )}
                   <li>Date : {e[0].timestamp}</li>
-                  {e[0].humidity && <li>Humidité : {e[0].humidity}</li>}
+                  {e[0].humidity && <li>Humidité : {e[0].humidity} %</li>}
                 </ul>
                 <h2>Partager</h2>
                 <Share data={e[0]} />
