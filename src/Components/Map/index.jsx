@@ -25,7 +25,7 @@ export default function Map() {
               id="locateButton"
               onClick={handleLocate}
             >
-              <span>Localisation</span>
+              <span className="material-icons md-50">location_searching</span>
             </button>
             <Filter />
           </nav>
