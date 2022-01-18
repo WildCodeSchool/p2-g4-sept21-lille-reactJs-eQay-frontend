@@ -1,41 +1,12 @@
 import styled from 'styled-components';
 
-const AboutPage = styled.div`
+const SAboutUs = styled.article`
   @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    font-size: 1.3rem;
-    font-family: 'Roboto', cursive;
-  }
-  .pageTitle {
-    height: 25vh;
-  }
-  .informationsSection {
-    padding: 2rem 0;
-  }
-  .covid {
-    padding: 7rem 0;
-    margin-bottom: 3rem;
-  }
-  .erp {
-    padding: 4rem 0;
-    margin-bottom: 3rem;
-  }
-  .founders {
-    padding: 4rem 0;
-  }
-  .clipPath {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
-  }
-  .clipPathSection {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 9 0vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
-  }
-  .backgroundGreen {
+  .headAboutUs {
+    position: fixed;
+    clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 20vh);
     background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -46,124 +17,107 @@ const AboutPage = styled.div`
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     );
-  }
-  .fontColorWhite {
     color: white;
-  }
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Indie Flower', cursive;
-  }
-  h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    font-family: 'Indie Flower', cursive;
-  }
-  h3 {
-    font-size: 2rem;
-    font-weight: 200;
-    font-family: 'Indie Flower', cursive;
-  }
-  ul li {
-    list-style-type: circle;
-    margin-bottom: 1.5rem;
-  }
-  span {
-    font-size: 2rem;
-    font-weight: 400;
-  }
-  .boxShadow {
-    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.19),
-      0 15px 15px rgba(0, 0, 0, 0.23);
-  }
-  .textShadow {
-    text-shadow: 0.2rem 0.2rem 0.2rem black;
-  }
-  .italic {
-    font-style: italic;
-  }
-  .illustrationText {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  .illustrationPicture {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  .totalWidth {
-    width: 100%;
-  }
-  .flex {
-    display: flex;
-    justify-content: space-around;
-  }
-  .flexCenter {
-    display: flex;
-    align-items: center;
-  }
-  .flexColumn {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .flexCenter {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .relative {
-    position: relative;
-  }
-  .absolute {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .middle {
+    height: 20vh;
     text-align: center;
+    font-size: 5vh;
+    padding-top: 2%;
+    width: 100%;
+    z-index: 1;
   }
-  .borderHalf {
-    border-radius: 50%;
+
+  .imgMap {
+    height: 40%;
+    width: 40%;
+    padding: 20px;
+    border-radius: 35px;
   }
-  .border {
-    border-radius: 10rem;
+
+  .whyEqai {
+    display: flex;
+    padding-top: 20vh;
   }
-  .padding {
-    padding: 3rem 0;
+
+  .contentWhyEqai,
+  .contentPresAsso,
+  .contentBenevole,
+  .contentFounder {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
   }
-  .marginBottom {
-    margin-bottom: 3rem;
+
+  h2 {
+    text-align: center;
+    padding: 40px;
+    padding-top: 0;
+    font-size: 18px;
+    font-weight: bold;
   }
-  .marginBottomBig {
-    margin-bottom: 7rem;
+
+  p {
+    margin: 10px;
+    font-style: justify;
   }
-  .marginLeft {
-    margin-left: 4rem;
+
+  .imgData {
+    height: 30%;
+    width: 30%;
+    padding: 20px;
   }
-  .marginRight {
-    margin-right: 4rem;
+
+  .presAsso {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    );
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    );
+    clip-path: polygon(0 26%, 100% 0, 100% 89%, 0 100%);
   }
-  .marginTop {
-    margin-top: 5rem;
+
+  .imgBenevole {
+    height: 30%;
+    width: 30%;
+    padding: 20px;
   }
-  .smallMarginBottom {
-    margin-bottom: 1rem;
+  .benevole {
+    display: flex;
   }
-  .resizePhoto {
-    height: 300px;
-    width: auto;
+
+  .imgFounder {
+    border-radius: 110px;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
   }
-  .resizeSmallPhoto {
-    height: 100px;
-    width: auto;
+
+  .img {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .presFounder {
+    padding: 30px;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    );
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    );
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
   }
 
   @media only screen and (max-width: 1250px) {
@@ -220,4 +174,4 @@ const AboutPage = styled.div`
   }
 `;
 
-export default AboutPage;
+export default SAboutUs;
