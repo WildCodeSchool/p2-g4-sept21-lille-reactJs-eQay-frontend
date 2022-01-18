@@ -10,7 +10,7 @@ const SMap = styled.div`
     flex-direction: column;
   }
   .bn632-hover {
-    width: 160px;
+    width: 132px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
