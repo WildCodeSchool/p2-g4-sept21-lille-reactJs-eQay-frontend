@@ -44,17 +44,17 @@ export default function MarkerOutdoor() {
             <Popup>
               <SPopup>
                 <ul>
-                  {e[0].no2 && <li>No2:{parseInt(e[0].no2, 10)}</li>}
-                  {e[0].o3 && <li>O3:{parseInt(e[0].o3, 10)}</li>}
-                  {e[0].nox && <li>NOX:{parseInt(e[0].nox, 10)}</li>}
-                  {e[0].no && <li>No:{parseInt(e[0].no, 10)}</li>}
-                  {e[0].pm10 && <li>Pm10:{parseInt(e[0].pm10, 10)}</li>}
-                  {e[0].pm25 && <li>Pm25:{parseInt(e[0].pm25, 10)}</li>}
+                  {e[0].no2 && <li>No2:{parseInt(e[0].no2, 10)} μg/m3</li>}
+                  {e[0].o3 && <li>O3:{parseInt(e[0].o3, 10)} μg/m3</li>}
+                  {e[0].nox && <li>NOX:{parseInt(e[0].nox, 10)} μg/m3</li>}
+                  {e[0].no && <li>No:{parseInt(e[0].no, 10)} μg/m3</li>}
+                  {e[0].pm10 && <li>Pm10:{parseInt(e[0].pm10, 10)} µg/m3</li>}
+                  {e[0].pm25 && <li>Pm2,5:{parseInt(e[0].pm25, 10)} µg/m3</li>}
                   {e[0].temperature && (
-                    <li>Température : {parseInt(e[0].temperature, 10)}</li>
+                    <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
                   )}
                   <li>Date : {e[0].timestamp}</li>
-                  {e[0].humidity && <li>Humidité : {e[0].humidity}</li>}
+                  {e[0].humidity && <li>Humidité : {e[0].humidity} %</li>}
                 </ul>
                 <h2>Partager</h2>
                 <Share data={e[0]} />
