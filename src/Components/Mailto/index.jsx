@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-// import SMailto from './style';
 
 export default function Mailto({ email }) {
   return (
