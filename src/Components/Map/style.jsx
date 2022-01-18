@@ -25,18 +25,15 @@ const SMap = styled.div`
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-
   .bn632-hover:hover {
     background-position: 100% 0;
     -o-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-
   .bn632-hover:focus {
     outline: none;
   }
-
   .bn632-hover.bn18 {
     background-image: linear-gradient(
       to right,
@@ -52,7 +49,6 @@ const SMap = styled.div`
     width: 100vw;
     z-index: 1;
   }
-
   @media only screen and (max-width: 480px) {
     nav {
       margin: 2vh 3vw;
@@ -64,7 +60,6 @@ const SMap = styled.div`
       justify-content: space-between;
       margin: 0;
     }
-
     .bn632-hover {
       position: relative;
       bottom: 0px;
