@@ -5,6 +5,7 @@ import linkedIn from 'assets/linkedin.png';
 import insta from 'assets/insta.png';
 import twitter from 'assets/twitter.png';
 import './style.css';
+import Mailto from 'Components/Mailto';
 
 export default function BurgerMenuMaps() {
   const currentYear = new Date().getFullYear();
@@ -35,22 +36,44 @@ export default function BurgerMenuMaps() {
         >
           Nous soutenir
         </a>
-        <Link id="contactus" className="menuItem" to="/contactus">
-          Contactez-nous
-        </Link>
-        <div className="footerBurger">
-          <h2 className="followUs">Suivez-nous</h2>
-          <section className="allLogo">
-            <img className="imgLogo" src={facebook} alt="facebook" />
-            <img className="imgLogo" src={twitter} alt="twitter" />
-            <img className="imgLogo" src={linkedIn} alt="linkedin" />
-            <img className="imgLogo" src={insta} alt="instagram" />
-          </section>
-          <h3 className="legalMention">Mentions légales</h3>
-          <h3 className="copyright">
-            Copyright <span className="copyrightYear"> {currentYear} </span>
-          </h3>
+        <div className="mailto">
+          <Mailto />
         </div>
+        <h2 className="followUs">Suivez-nous</h2>
+        <section className="allLogo">
+          <a
+            href="https://www.facebook.com/eqai.asso"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="imgLogo" src={facebook} alt="facebook" />
+          </a>
+          <a
+            href="https://twitter.com/eQAIassociation"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="imgLogo" src={twitter} alt="twitter" />
+          </a>
+          <a
+            href="http://www.linkedin.com/company/eqai"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="imgLogo" src={linkedIn} alt="linkedin" />
+          </a>
+          <a
+            href="https://www.instagram.com/eqai.association/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="imgLogo" src={insta} alt="instagram" />
+          </a>
+        </section>
+        <h3 className="legalMention">Mentions légales</h3>
+        <h3 className="copyright">
+          Copyright <span className="copyrightYear"> {currentYear} </span>
+        </h3>
       </Menu>
     </>
   );
