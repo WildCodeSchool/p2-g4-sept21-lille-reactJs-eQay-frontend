@@ -15,26 +15,29 @@ import EqaiContext from '../../Context/EqaiContext';
 
 const greenAirIcon = new L.Icon({
   iconUrl: greenAir,
-  iconSize: [25, 25],
+  iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
-
 const yellowAirIcon = new L.Icon({
   iconUrl: yellowAir,
-  iconSize: [25, 25],
+  iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 const orangeAirIcon = new L.Icon({
   iconUrl: orangeAir,
-  iconSize: [25, 25],
+  iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 const redAirIcon = new L.Icon({
   iconUrl: redAir,
-  iconSize: [25, 25],
+  iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
 const greyAirIcon = new L.Icon({
   iconUrl: greyAir,
-  iconSize: [25, 25],
+  iconSize: [40, 40],
+  iconAnchor: [20, 40],
 });
-
 export default function MarkerIndoor() {
   const [allDataIndoors, setAllDataIndoors] = useState([]);
   const { filterValue } = useContext(EqaiContext);
@@ -48,7 +51,6 @@ export default function MarkerIndoor() {
       console.log(error);
     }
   }, []);
-
   function switchIcon(value) {
     if (value <= 0) {
       return greyAirIcon;
@@ -130,7 +132,7 @@ export default function MarkerIndoor() {
       }}
     >
       {allDataIndoors.map((e) => {
-        return (
+        return e[0].type === 'Int' ? (
           <Marker
             position={[e[0].adresses_latitude, e[0].adresses_longitude]}
             icon={switchIcon(e[0][filterValue])}
@@ -167,7 +169,7 @@ export default function MarkerIndoor() {
               </SPopup>
             </Popup>
           </Marker>
-        );
+        ) : null;
       })}
     </MarkerIndoorGroup>
   );
