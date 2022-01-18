@@ -12,7 +12,7 @@ import SPopup from './style';
 import './index.css';
 import EqaiContext from '../../Context/EqaiContext';
 
-const BlueAirIcon = new L.Icon({
+const blueAirIcon = new L.Icon({
   iconUrl: blueAirExt,
   iconSize: [25, 25],
 });
@@ -49,7 +49,10 @@ export default function MarkerOutdoor() {
       filterValue === 'nox' ||
       filterValue === 'no'
     ) {
-      return BlueAirIcon;
+      return blueAirIcon;
+    }
+    if (filterValue === 'pm10' && value === null) {
+      return blueAirIcon;
     }
     if (filterValue === 'pm10' && (value === 0 || value < 20)) {
       return greenAirIcon;
@@ -96,7 +99,7 @@ export default function MarkerOutdoor() {
     if (filterValue === 'humidity' && (value < 20 || value > 80)) {
       return redAirIcon;
     }
-    return BlueAirIcon;
+    return blueAirIcon;
   }
 
   return (
@@ -132,8 +135,8 @@ export default function MarkerOutdoor() {
                   {filterValue === 'no' ? (
                     <li>No:{parseInt(e[0].no, 10)}</li>
                   ) : null}
-                  {filterValue === 'pm10' ? (
-                    <li>Pm10 : {parseInt(e[0].pm10, 10)}</li>
+                  {filterValue === 'pm10' && e[0].pm10 != null ? (
+                    <li>Pm10 :{parseInt(e[0].pm10, 10)}</li>
                   ) : null}
                   {filterValue === 'pm25' ? (
                     <li>Pm25 : {parseInt(e[0].pm25, 10)}</li>
@@ -141,7 +144,16 @@ export default function MarkerOutdoor() {
                   {filterValue === 'temperature' ? (
                     <li>Température : {parseInt(e[0].temperature, 10)}</li>
                   ) : null}
-                  <li>Date :{e[0].timestamp.toLocaleString('fr-FR')}</li>
+                  <li>
+                    Date :
+                    {e[0].timestamp
+                      .slice(0, 10)
+                      .split('-')
+                      .reverse()
+                      .join('/ ')}
+                    &nbsp;
+                    {e[0].timestamp.slice(11, 19).split('-').reverse()}
+                  </li>
                   {filterValue === 'humidity' ? (
                     <li>Humidité : {e[0].humidity}</li>
                   ) : null}
