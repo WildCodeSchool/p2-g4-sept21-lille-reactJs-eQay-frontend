@@ -52,6 +52,34 @@ const SMap = styled.div`
     width: 100vw;
     z-index: 1;
   }
+
+  @media only screen and (max-width: 480px) {
+    nav {
+      margin: 2vh 3vw;
+      z-index: 10;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    .bn632-hover {
+      position: relative;
+      bottom: 0px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    select {
+      position: relative;
+      top: 30px;
+      right: 5vw;
+    }
+  }
 `;
 
 export default SMap;

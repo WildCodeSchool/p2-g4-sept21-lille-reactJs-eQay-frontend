@@ -5,7 +5,7 @@ const SRadio = styled.form`
   flex-direction: column;
   align-items: center;
   .radLabel {
-    width: 128px;
+    width: 100px;
     display: flex;
     align-items: center;
     background-color: white;
