@@ -54,7 +54,8 @@
   color: #b8b7ad;
 }
 
-.bm-item {
+.bm-item,
+a {
   display: inline-block;
   text-decoration: none;
   color: var(--color-secondary);
@@ -63,7 +64,8 @@
   font-size: 18px;
 }
 
-.bm-item:hover {
+.bm-item:hover,
+a:hover {
   color: white;
   background-color: var(--color-primary);
 }
@@ -72,29 +74,26 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-.footerBurger {
-  display: flex;
-  pointer-events: none;
-  padding-top: 5%;
-}
-
 .followUs {
   text-align: center;
   padding-bottom: 8%;
   font-size: 22px;
+  pointer-events: none;
 }
 
 .imgLogo {
-  justify-content: space-evenly;
+  justify-content: center;
   width: 50px;
   height: 50px;
   padding: 5px;
   padding-left: 8px;
+  cursor: pointer;
 }
 
 .legalMention {
   text-align: center;
   padding-top: 20%;
+  pointer-events: none;
 }
 
 .copyright {
@@ -102,6 +101,7 @@
   text-align: center;
   padding: 12%;
   font-size: 13px;
+  pointer-events: none;
 }
 
 .copyrightYear {

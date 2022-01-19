@@ -124,25 +124,25 @@ export default function MarkerOutdoor() {
               <SPopup>
                 <ul>
                   {filterValue === 'no2' ? (
-                    <li>No2:{parseInt(e[0].no2, 10)}</li>
+                    <li>No2:{parseInt(e[0].no2, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'o3' ? (
-                    <li>O3:{parseInt(e[0].o3, 10)}</li>
+                    <li>O3:{parseInt(e[0].o3, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'nox' ? (
-                    <li>NOX:{parseInt(e[0].nox, 10)}</li>
+                    <li>NOX:{parseInt(e[0].nox, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'no' ? (
-                    <li>No:{parseInt(e[0].no, 10)}</li>
+                    <li>No:{parseInt(e[0].no, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'pm10' && e[0].pm10 != null ? (
-                    <li>Pm10 :{parseInt(e[0].pm10, 10)}</li>
+                    <li>Pm10 :{parseInt(e[0].pm10, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'pm25' ? (
-                    <li>Pm25 : {parseInt(e[0].pm25, 10)}</li>
+                    <li>Pm25 : {parseInt(e[0].pm25, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'temperature' ? (
-                    <li>Température : {parseInt(e[0].temperature, 10)}</li>
+                    <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
                   ) : null}
                   <li>
                     Date :
@@ -155,7 +155,7 @@ export default function MarkerOutdoor() {
                     {e[0].timestamp.slice(11, 19).split('-').reverse()}
                   </li>
                   {filterValue === 'humidity' ? (
-                    <li>Humidité : {e[0].humidity}</li>
+                    <li>Humidité : {e[0].humidity} %</li>
                   ) : null}
                 </ul>
                 <h2>Partager</h2>
