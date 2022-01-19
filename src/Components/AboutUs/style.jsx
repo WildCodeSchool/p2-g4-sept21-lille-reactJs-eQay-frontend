@@ -25,19 +25,16 @@ const SAboutUs = styled.article`
     width: 100%;
     z-index: 1;
   }
-
   .imgMap {
     height: 40%;
     width: 40%;
     padding: 20px;
     border-radius: 35px;
   }
-
   .whyEqai {
     display: flex;
     padding-top: 20vh;
   }
-
   .contentWhyEqai,
   .contentPresAsso,
   .contentBenevole,
@@ -47,7 +44,6 @@ const SAboutUs = styled.article`
     flex-direction: column;
     justify-content: center;
   }
-
   h2 {
     text-align: center;
     padding: 40px;
@@ -55,18 +51,15 @@ const SAboutUs = styled.article`
     font-size: 18px;
     font-weight: bold;
   }
-
   p {
     margin: 10px;
     font-style: justify;
   }
-
   .imgData {
     height: 30%;
     width: 30%;
     padding: 20px;
   }
-
   .presAsso {
     display: flex;
     flex-direction: row-reverse;
@@ -83,7 +76,6 @@ const SAboutUs = styled.article`
     );
     clip-path: polygon(0 26%, 100% 0, 100% 89%, 0 100%);
   }
-
   .imgBenevole {
     height: 30%;
     width: 30%;
@@ -92,19 +84,16 @@ const SAboutUs = styled.article`
   .benevole {
     display: flex;
   }
-
   .imgFounder {
     border-radius: 110px;
     height: 200px;
     width: 200px;
     padding: 10px;
   }
-
   .img {
     display: flex;
     justify-content: space-evenly;
   }
-
   .presFounder {
     padding: 30px;
     background-image: linear-gradient(
@@ -119,7 +108,6 @@ const SAboutUs = styled.article`
     );
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
   }
-
   @media only screen and (max-width: 1250px) {
     .resizePhoto {
       height: 200px;
