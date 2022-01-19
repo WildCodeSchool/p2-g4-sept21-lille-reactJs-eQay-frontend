@@ -10,7 +10,7 @@ const SMap = styled.div`
     flex-direction: column;
   }
   .bn632-hover {
-    width: 160px;
+    width: 132px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
@@ -25,18 +25,15 @@ const SMap = styled.div`
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-
   .bn632-hover:hover {
     background-position: 100% 0;
     -o-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-
   .bn632-hover:focus {
     outline: none;
   }
-
   .bn632-hover.bn18 {
     background-image: linear-gradient(
       to right,
@@ -51,6 +48,32 @@ const SMap = styled.div`
     height: 100vh;
     width: 100vw;
     z-index: 1;
+  }
+  @media only screen and (max-width: 480px) {
+    nav {
+      margin: 2vh 3vw;
+      z-index: 10;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+      margin: 0;
+    }
+    .bn632-hover {
+      position: relative;
+      bottom: 0px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    select {
+      position: relative;
+      top: 30px;
+      right: 5vw;
+    }
   }
 `;
 
