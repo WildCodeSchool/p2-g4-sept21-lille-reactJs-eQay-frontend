@@ -5,7 +5,7 @@ const SSelect = styled.select`
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-    width: 100px;
+    width: 100%;
     height: 40px;
     border-radius: 8px;
     flex-direction: row;
