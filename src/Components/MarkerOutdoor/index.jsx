@@ -113,7 +113,7 @@ export default function MarkerOutdoor() {
       minute: 'numeric',
       second: 'numeric',
     });
-    return localDate;
+    return localDate.replace(',', ' ');
   }
   return (
     <MarkerIndoorGroup
@@ -137,29 +137,29 @@ export default function MarkerOutdoor() {
               <SPopup>
                 <ul>
                   {filterValue === 'no2' && e[0].no2 != null ? (
-                    <li>No2:{parseInt(e[0].no2, 10)} μg/m3</li>
+                    <li>No2: {parseInt(e[0].no2, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'o3' && e[0].o3 != null ? (
-                    <li>O3:{parseInt(e[0].o3, 10)} μg/m3</li>
+                    <li>O3: {parseInt(e[0].o3, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'nox' && e[0].nox != null ? (
-                    <li>NOX:{parseInt(e[0].nox, 10)} μg/m3</li>
+                    <li>NOX: {parseInt(e[0].nox, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'no' && e[0].no != null ? (
-                    <li>No:{parseInt(e[0].no, 10)} μg/m3</li>
+                    <li>No: {parseInt(e[0].no, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'pm10' && e[0].pm10 != null ? (
-                    <li>Pm10 :{parseInt(e[0].pm10, 10)} μg/m3</li>
+                    <li>Pm10 : {parseInt(e[0].pm10, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'pm25' && e[0].pm25 != null ? (
                     <li>Pm25 : {parseInt(e[0].pm25, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'temperature' ? (
                     <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
-                  ) : null}
-                  <li>
-                    Date :{changeToLocalDate(e[0].timestamp).replace(',', ' ')}
-                  </li>
+                  ) : (
+                    filterValue
+                  )}
+                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
                   {filterValue === 'humidity' ? (
                     <li>Humidité : {e[0].humidity} %</li>
                   ) : null}
