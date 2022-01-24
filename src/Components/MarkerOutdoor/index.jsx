@@ -44,14 +44,13 @@ export default function MarkerOutdoor() {
 
   function switchIcon(value) {
     if (
-      filterValue === 'no2' ||
-      filterValue === 'o3' ||
-      filterValue === 'nox' ||
-      filterValue === 'no'
+      (filterValue === 'pm10' && value === null) ||
+      (filterValue === 'pm25' && value === null) ||
+      (filterValue === 'no2' && value === null) ||
+      (filterValue === 'o3' && value === null) ||
+      (filterValue === 'nox' && value === null) ||
+      (filterValue === 'no' && value === null)
     ) {
-      return blueAirIcon;
-    }
-    if (filterValue === 'pm10' && value === null) {
       return blueAirIcon;
     }
     if (filterValue === 'pm10' && (value === 0 || value < 20)) {
@@ -102,6 +101,20 @@ export default function MarkerOutdoor() {
     return blueAirIcon;
   }
 
+  function changeToLocalDate(date) {
+    const parseDate = Date.parse(date);
+    const newdate = new Date(parseDate);
+    const localDate = newdate.toLocaleString(navigator.language, {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    });
+    return localDate.replace(',', ' ');
+  }
   return (
     <MarkerIndoorGroup
       spiderfyDistanceMultiplier={1}
@@ -123,6 +136,21 @@ export default function MarkerOutdoor() {
             <Popup>
               <SPopup>
                 <ul>
+                  {filterValue === 'aqi' && e[0].aqi === null ? (
+                    <li>Pas de donnée</li>
+                  ) : null}
+                  {filterValue === 'pm1' && e[0].pm1 === null ? (
+                    <li>Pas de donnée</li>
+                  ) : null}
+                  {filterValue === 'pm25' && e[0].pm25 === null ? (
+                    <li>Pas de donnée</li>
+                  ) : null}
+                  {filterValue === 'pm10' && e[0].pm10 === null ? (
+                    <li>Pas de donnée</li>
+                  ) : null}
+                  {filterValue === 'ppm' && e[0].ppm === null ? (
+                    <li>Pas de donnée</li>
+                  ) : null}
                   {filterValue === 'no2' ? (
                     <li>No2:{parseInt(e[0].no2, 10)} μg/m3</li>
                   ) : null}
@@ -144,16 +172,7 @@ export default function MarkerOutdoor() {
                   {filterValue === 'temperature' ? (
                     <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
                   ) : null}
-                  <li>
-                    Date :
-                    {e[0].timestamp
-                      .slice(0, 10)
-                      .split('-')
-                      .reverse()
-                      .join('/ ')}
-                    &nbsp;
-                    {e[0].timestamp.slice(11, 19).split('-').reverse()}
-                  </li>
+                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
                   {filterValue === 'humidity' ? (
                     <li>Humidité : {e[0].humidity} %</li>
                   ) : null}
