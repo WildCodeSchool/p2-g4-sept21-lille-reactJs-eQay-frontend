@@ -23,26 +23,31 @@ const SNews = styled.article`
     color: white;
   }
   h3 {
-    padding-top: 22vh;
+    padding: 4vh;
     text-align: center;
     font-size: 25px;
   }
+
+  .title {
+    display: flex;
+    padding-top: 150px;
+    align-items: center;
+  }
   .imgDidYouKnow {
     height: 25vh;
-    padding: 50px;
   }
   .imgContent {
     position: relative;
-    width: 70%;
+    width: 100%;
     height: 70%;
-    margin: auto;
+    text-align: center;
   }
   .contentNews {
     position: absolute;
     width: 55%;
     font-size: 22px;
     text-align: center;
-    margin: 5vh;
+    margin: 10vh;
     font-weight: bold;
   }
   .imgIndoorPollution {
@@ -50,6 +55,28 @@ const SNews = styled.article`
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
   }
+  .imgPublicHealth {
+    width: 15%;
+    height: 20%;
+  }
+
+  .headRegulation {
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+  
+
+  .titleRegulation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+
+  .organigramme {
+    border: 1px solid red;
+    width: 90vw;
+     }
 `;
 
 export default SNews;
