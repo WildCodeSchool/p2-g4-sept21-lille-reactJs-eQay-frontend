@@ -1,7 +1,3 @@
-import map from 'assets/atlas-obscura-cartes-interactive-merveilles-monde-visiter-une.jpg';
-import indoorPollution from 'assets/pollution-interieur-air-sain_6098113.jpg';
-import publicHealth from 'assets/sante-publique-france.png';
-import didYouKnow from 'assets/bubble-title2.jpg';
 import sources from 'assets/sources-pollution.png';
 import cloud from 'assets/images.png';
 import innerPart from 'assets/Pollution-interieure.jpg';
@@ -10,13 +6,6 @@ import coronavirus from 'assets/coronavirus.png';
 import erp from 'assets/erp.png';
 import moreInformations from 'assets/info.png';
 import allTogether from 'assets/5-astuces-pour-améliorer-la-communauté-de-son-blog.jpg';
-import indoorAir from 'assets/pollution_interieur.jpg';
-import maskedChild from 'assets/unnamed.jpg';
-import openData from 'assets/89_1079_open_data_large.jpg';
-import volunteers from 'assets/1554288633350.jpg';
-import sensors from 'assets/sensors.JPEG';
-import happyChild from 'assets/happyChild.png';
-import greenBuildings from 'assets/La-pollution-de-l-air-interieur-touche-les-ecoconstructions1.jpg';
 
 import { useEffect } from 'react';
 import AOS from 'aos';
@@ -33,62 +22,6 @@ export default function AboutUsContents() {
     <>
       <AboutPage>
         <main>
-          <section className="pageTitle backgroundGreen clipPath relative">
-            <h1 className="fontColorWhite absolute">Qui sommes-nous?</h1>
-          </section>
-          <section className="whyCreateadSection container marginTop marginBottom flex">
-            <figure className="illustrationPicture" data-aos="fade-left">
-              <img src={map} alt="carte" />
-            </figure>
-            <div className="flexColumn marginLeft" data-aos="fade-right">
-              <h2>Pourquoi avoir créé eQAI ? </h2>
-              <p>
-                Nous avons créé l&#39;association à but non lucratif (loi 1901)
-                eQAI car nous souhaitons fédérer toutes les personnes et
-                organisations voulant participer à la création de la première
-                carte interactive de la pollution de l&#39;air intérieur des
-                bâtiments.
-              </p>
-              <p>
-                Accessible à toute et tous, gratuite, elle est un véritable
-                outil de communication dans un objectif de répondre à une
-                problématique encore trop méconnue ou sous-estimée.
-              </p>
-            </div>
-          </section>
-          <section className="informationsSection backgroundGreen">
-            <h3 className="fontColorWhite marginBottom middle">
-              <span>Car</span> oui, notre santé commence par l&#39;air que nous
-              respirons !
-            </h3>
-            <div className="flexColumn container">
-              <figure className="flex marginBottom" data-aos="fade-right">
-                <img
-                  src={didYouKnow}
-                  alt="Le saviez-vous"
-                  className="border-half resizeSmallPhoto"
-                />
-                <figcaption className="italic marginLeft fontColorWhite">
-                  En moyenne nous passons quotidiennement 80% de notre temps à
-                  l&#39;intérieur de bâtiments dans lesquels l&#39;air que nous
-                  respirons peut être jusqu&#39;à 10x plus pollué qu&#39;à
-                  l&#39;extérieur.
-                </figcaption>
-              </figure>
-              <figure className="flex marginBottom" data-aos="fade-left">
-                <img
-                  src={indoorPollution}
-                  alt="pollution intérieur"
-                  className="resizePhoto"
-                />
-                <img
-                  src={publicHealth}
-                  alt="santé publique france"
-                  className="resizePhoto"
-                />
-              </figure>
-            </div>
-          </section>
           <section className="sources">
             <figure className="illustrationPicture" data-aos="fade-right">
               <img
@@ -272,108 +205,6 @@ export default function AboutUsContents() {
               jugée partie. Les pouvoirs publics ne peuvent également et
               légitimement pas porté cette mission et charge de surveillance.
             </p>
-          </section>
-          <section className="whyEqai">
-            <h2 className="middle" data-aos="fade-left">
-              Que signifie eQAI ?
-            </h2>
-            <p className="marginBottom container" data-aos="fade-left">
-              &#34;e&#34; pour le digital et &#34;QAI&#34; pour Qualité
-              d&#39;Air Intérieur.
-            </p>
-            <figure
-              className="illustrationPicture flexCenter marginBottom container"
-              data-aos="fade-right"
-            >
-              <img
-                src={indoorAir}
-                alt="Qualité d'Air Intérieur"
-                className="resizePhoto"
-              />
-              <img
-                src={maskedChild}
-                alt="enfant masqué "
-                className="resizePhoto"
-              />
-            </figure>
-            <h3 className="middle marginBottom" data-aos="fade-left">
-              Présentation de l&#39;association
-            </h3>
-            <p className="marginBottom container" data-aos="fade-right">
-              L&#39;association œuvre dans le monde digital en collectant les
-              mesures de qualité d&#39;air effectuées par ses adhérents. Ces
-              données sont anonymisées puis proposées en open source à toutes
-              personnes et organisations ayant le même objectif.
-            </p>
-            <figure
-              className="illustrationPicture middle marginBottom"
-              data-aos="fade-left"
-            >
-              <img src={openData} alt="open Data" className="resizePhoto" />
-            </figure>
-            <p className="marginBottom container" data-aos="fade-right">
-              Des bénévoles en informatique codent un programme qui est
-              régulièrement adapté en fonction du modèle de données qui nous est
-              proposé. Nous accueillons toutes les personnes physiques et
-              morales avec une compétence en informatique, droit ou
-              communication !
-            </p>
-            <figure
-              className="illustrationPicture middle marginBottom"
-              data-aos="fade-left"
-            >
-              <img src={volunteers} alt="bénévoles" className="resizePhoto" />
-            </figure>
-            <p className="marginBottom container" data-aos="fade-right">
-              La gestion de la base des adhérents est facilitée par HelloAsso.
-            </p>
-          </section>
-          <section className="founders backgroundGreen fontColorWhite textShadow">
-            <h2 className="middle marginBottom" data-aos="fade-left">
-              Les fondateurs
-            </h2>
-            <p className="marginBottom container" data-aos="fade-right">
-              Cédric Brugnon et Guillaume Frémion ont travaillé pendant des
-              années à la réduction de la consommation d&#39;énergie des
-              bâtiments et se sont lancés dans cette problématiques sanitaire
-              mondiale.
-              <br />
-              <br />
-              <br />
-              &#34;Nos parcours salariaux dans des filiales de grands groupes
-              énergétiques nous ont convaincu de vouloir une structure légère et
-              efficace.
-              <br />
-              <br />
-              <br />
-              Nous entreprenons en parallèle avec la création de BATeMOB qui est
-              une société qui propose des tableaux de bord de qualité d&#39;air
-              et énergie pour faciliter le passage à l&#39;action des
-              propriétaires des bâtiments collectifs (publics et privés) et dans
-              le projet Le Capteur Français qui créé des objets électroniques
-              utiles à la compréhension de notre environnement&#34;
-            </p>
-            <figure
-              className="illustrationPicture flexCenter marginBottom"
-              data-aos="fade-left"
-            >
-              <img src={sensors} alt="capteurs" className="resizePhoto" />
-              <img
-                src={happyChild}
-                alt="un enfant heureux"
-                className="resizePhoto"
-              />
-            </figure>
-            <figure
-              className="illustrationPicture middle marginBottom"
-              data-aos="fade-right"
-            >
-              <img
-                src={greenBuildings}
-                alt="Batiments végétalisés"
-                className="border-half resizePhoto"
-              />
-            </figure>
           </section>
         </main>
       </AboutPage>
