@@ -1,41 +1,12 @@
 import styled from 'styled-components';
 
-const AboutPage = styled.div`
+const SAboutUs = styled.article`
   @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    font-size: 1.3rem;
-    font-family: 'Roboto', cursive;
-  }
-  .pageTitle {
-    height: 25vh;
-  }
-  .informationsSection {
-    padding: 2rem 0;
-  }
-  .covid {
-    padding: 7rem 0;
-    margin-bottom: 3rem;
-  }
-  .erp {
-    padding: 4rem 0;
-    margin-bottom: 3rem;
-  }
-  .founders {
-    padding: 4rem 0;
-  }
-  .clipPath {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
-  }
-  .clipPathSection {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 9 0vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
-  }
-  .backgroundGreen {
+  .headAboutUs {
+    position: fixed;
+    clip-path: polygon(0 0, 100vw 0, 100vw 9vh, 0 20vh);
     background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -46,178 +17,167 @@ const AboutPage = styled.div`
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     );
-  }
-  .fontColorWhite {
     color: white;
-  }
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Indie Flower', cursive;
-  }
-  h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    font-family: 'Indie Flower', cursive;
-  }
-  h3 {
-    font-size: 2rem;
-    font-weight: 200;
-    font-family: 'Indie Flower', cursive;
-  }
-  ul li {
-    list-style-type: circle;
-    margin-bottom: 1.5rem;
-  }
-  span {
-    font-size: 2rem;
-    font-weight: 400;
-  }
-  .boxShadow {
-    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.19),
-      0 15px 15px rgba(0, 0, 0, 0.23);
-  }
-  .textShadow {
-    text-shadow: 0.2rem 0.2rem 0.2rem black;
-  }
-  .italic {
-    font-style: italic;
-  }
-  .illustrationText {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  .illustrationPicture {
+    height: 20vh;
+    text-align: center;
+    font-size: 5vh;
+    padding-top: 2%;
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    z-index: 1;
   }
-  .totalWidth {
-    width: 100%;
+  .imgMap {
+    height: 40%;
+    width: 40%;
+    padding: 20px;
+    border-radius: 35px;
   }
-  .flex {
+  .whyEqai {
     display: flex;
-    justify-content: space-around;
+    padding-top: 20vh;
+    justify-content: space-evenly;
   }
-  .flexCenter {
+  .contentFounder {
+    width: 70%;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    font-style: justify;
   }
-  .flexColumn {
+  .contentWhyEqai,
+  .contentPresAsso,
+  .contentBenevole {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    width: 40%;
+    font-style: justify;
   }
-  .flexCenter {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .relative {
-    position: relative;
-  }
-  .absolute {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .middle {
+  h2 {
     text-align: center;
+    padding: 20px;
+    padding-top: 0;
+    font-size: 18px;
+    font-weight: bold;
   }
-  .borderHalf {
-    border-radius: 50%;
+  p {
+    margin: 10px;
+    font-style: justify;
   }
-  .border {
-    border-radius: 10rem;
+  .imgData {
+    height: 25%;
+    width: 25%;
+    padding: 20px;
   }
-  .padding {
-    padding: 3rem 0;
+  .presAsso {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    font-style: justify;
+    width: 100%;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    );
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    );
+    clip-path: polygon(0 10%, 100% 0, 100% 95%, 0 100%);
   }
-  .marginBottom {
-    margin-bottom: 3rem;
+  .imgBenevole {
+    height: 25%;
+    width: 25%;
+    padding: 10px;
   }
-  .marginBottomBig {
-    margin-bottom: 7rem;
+  .benevole {
+    display: flex;
+    justify-content: space-evenly;
   }
-  .marginLeft {
-    margin-left: 4rem;
+  .imgFounder {
+    border-radius: 110px;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
   }
-  .marginRight {
-    margin-right: 4rem;
+  .img {
+    display: flex;
+    justify-content: space-evenly;
   }
-  .marginTop {
-    margin-top: 5rem;
+  .presFounder {
+    width: 100%;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    );
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    );
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    padding-top: 20px;
   }
-  .smallMarginBottom {
-    margin-bottom: 1rem;
-  }
-  .resizePhoto {
-    height: 300px;
-    width: auto;
-  }
-  .resizeSmallPhoto {
-    height: 100px;
-    width: auto;
+  .titleFounder {
+    padding: 10px;
   }
 
-  @media only screen and (max-width: 1250px) {
-    .resizePhoto {
-      height: 200px;
-      width: auto;
+  @media only screen and (max-width: 768px) {
+    .headAboutUs {
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+      padding-top: 38px;
+      padding-left: 15px;
     }
-    .illustrationText {
-      font-size: 1.5rem;
+
+    .presAsso {
+      clip-path: polygon(0 20%, 100% 5%, 100% 95%, 0 100%);
     }
-    .marginBottomBig {
-      margin-bottom: 2rem;
+    .imgData {
+      height: 40%;
+      width: 70%;
+      padding-top: 120px;
+      margin: auto;
     }
-    .flex {
+    .imgMap,
+    .imgBenevole {
+      height: 70%;
+      width: 70%;
+      padding-top: 100px;
+      margin: auto;
+    }
+    .whyEqai,
+    .presAsso,
+    .benevole {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      flex-direction: column;
+      height: 60vh;
     }
-  }
-  @media only screen and (max-width: 700px) {
-    .resizePhoto {
-      height: 150px;
-      width: auto;
+    .contentWhyEqai,
+    .contentPresAsso,
+    .contentBenevole,
+    .contentFounder {
+      width: 75%;
+      margin: auto;
+      text-align: justify;
+      margin-bottom: 40px;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 500;
+    .img {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
     }
-    .illustrationText {
-      font-size: 0.8rem;
-    }
-    .marginBottomBig {
-      margin-bottom: 1rem;
-    }
-  }
-  @media only screen and (max-width: 400px) {
-    .resizePhoto {
-      height: 100px;
-      width: auto;
-    }
-    .resizeSmallPhoto {
-      height: 50px;
-      width: auto;
-    }
-    .container {
-      font-size: 1rem;
-    }
-    .illustrationText {
-      font-size: 0.5rem;
-    }
-    .marginBottomBig {
-      margin-bottom: 0.5rem;
+
+    .presFounder {
+      margin-top: 70px;
     }
   }
 `;
 
-export default AboutPage;
+export default SAboutUs;

@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     --color-secondary: #2d6187;
     --color-third: #a8dda8;
     --font-family: 'Dekko';
-  }`;
+  }
+  
+  body {
+    width: 100%;
+  }
+  `;
 
 export default GlobalStyle;
