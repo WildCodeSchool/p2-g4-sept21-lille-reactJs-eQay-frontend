@@ -6,7 +6,7 @@ const SAboutUs = styled.article`
 
   .headAboutUs {
     position: fixed;
-    clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 20vh);
+    clip-path: polygon(0 0, 100vw 0, 100vw 9vh, 0 20vh);
     background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -25,52 +25,57 @@ const SAboutUs = styled.article`
     width: 100%;
     z-index: 1;
   }
-
   .imgMap {
     height: 40%;
     width: 40%;
     padding: 20px;
     border-radius: 35px;
   }
-
   .whyEqai {
     display: flex;
     padding-top: 20vh;
+    justify-content: space-evenly;
   }
-
+  .contentFounder {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    font-style: justify;
+  }
   .contentWhyEqai,
   .contentPresAsso,
-  .contentBenevole,
-  .contentFounder {
+  .contentBenevole {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    width: 40%;
+    font-style: justify;
   }
-
   h2 {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     padding-top: 0;
     font-size: 18px;
     font-weight: bold;
   }
-
   p {
     margin: 10px;
     font-style: justify;
   }
-
   .imgData {
-    height: 30%;
-    width: 30%;
+    height: 25%;
+    width: 25%;
     padding: 20px;
   }
-
   .presAsso {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
-    padding: 20px;
+    font-style: justify;
+    width: 100%;
     background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -81,32 +86,29 @@ const SAboutUs = styled.article`
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     );
-    clip-path: polygon(0 26%, 100% 0, 100% 89%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 95%, 0 100%);
   }
-
   .imgBenevole {
-    height: 30%;
-    width: 30%;
-    padding: 20px;
+    height: 25%;
+    width: 25%;
+    padding: 10px;
   }
   .benevole {
     display: flex;
+    justify-content: space-evenly;
   }
-
   .imgFounder {
     border-radius: 110px;
     height: 200px;
     width: 200px;
     padding: 10px;
   }
-
   .img {
     display: flex;
     justify-content: space-evenly;
   }
-
   .presFounder {
-    padding: 30px;
+    width: 100%;
     background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -117,59 +119,63 @@ const SAboutUs = styled.article`
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     );
-    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    padding-top: 20px;
+  }
+  .titleFounder {
+    padding: 10px;
   }
 
-  @media only screen and (max-width: 1250px) {
-    .resizePhoto {
-      height: 200px;
-      width: auto;
+  @media only screen and (max-width: 768px) {
+    .headAboutUs {
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+      padding-top: 38px;
+      padding-left: 15px;
     }
-    .illustrationText {
-      font-size: 1.5rem;
+
+    .presAsso {
+      clip-path: polygon(0 20%, 100% 5%, 100% 95%, 0 100%);
     }
-    .marginBottomBig {
-      margin-bottom: 2rem;
+    .imgData {
+      height: 40%;
+      width: 70%;
+      padding-top: 120px;
+      margin: auto;
     }
-    .flex {
+    .imgMap,
+    .imgBenevole {
+      height: 70%;
+      width: 70%;
+      padding-top: 100px;
+      margin: auto;
+    }
+    .whyEqai,
+    .presAsso,
+    .benevole {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      flex-direction: column;
+      height: 60vh;
     }
-  }
-  @media only screen and (max-width: 700px) {
-    .resizePhoto {
-      height: 150px;
-      width: auto;
+    .contentWhyEqai,
+    .contentPresAsso,
+    .contentBenevole,
+    .contentFounder {
+      width: 75%;
+      margin: auto;
+      text-align: justify;
+      margin-bottom: 40px;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 500;
+    .img {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
     }
-    .illustrationText {
-      font-size: 0.8rem;
-    }
-    .marginBottomBig {
-      margin-bottom: 1rem;
-    }
-  }
-  @media only screen and (max-width: 400px) {
-    .resizePhoto {
-      height: 100px;
-      width: auto;
-    }
-    .resizeSmallPhoto {
-      height: 50px;
-      width: auto;
-    }
-    .container {
-      font-size: 1rem;
-    }
-    .illustrationText {
-      font-size: 0.5rem;
-    }
-    .marginBottomBig {
-      margin-bottom: 0.5rem;
+
+    .presFounder {
+      margin-top: 70px;
     }
   }
 `;

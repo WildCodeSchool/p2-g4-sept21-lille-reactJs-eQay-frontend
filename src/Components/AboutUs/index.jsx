@@ -22,8 +22,8 @@ export default function AboutUs() {
       <SAboutUs>
         <h1 className="headAboutUs">Qui sommes-nous?</h1>
         <article className="whyEqai">
-          <img className="imgMap" src={map} alt="carte" data-aos="fade-left" />
-          <section className="contentWhyEqai" data-aos="fade-left">
+          <img className="imgMap" src={map} alt="carte" />
+          <section className="contentWhyEqai">
             <h2>Pourquoi avoir créé eQAI ? </h2>
             <p>
               Nous avons créé l&#39;association à but non lucratif (loi 1901)
@@ -39,16 +39,11 @@ export default function AboutUs() {
             </p>
           </section>
         </article>
-        <article className="presAsso" data-aos="fade-left">
-          <img
-            data-aos="fade-left"
-            src={openData}
-            alt="open Data"
-            className="imgData"
-          />
+        <article className="presAsso">
+          <img src={openData} alt="open Data" className="imgData" />
           <section className="contentPresAsso">
-            <h2 data-aos="fade-right">Présentation de l&#39;association</h2>
-            <p data-aos="fade-right">
+            <h2>Présentation de l&#39;association</h2>
+            <p>
               L&#39;association œuvre dans le monde digital en collectant les
               mesures de qualité d&#39;air effectuées par ses adhérents. Ces
               données sont anonymisées puis proposées en open source à toutes
@@ -57,14 +52,9 @@ export default function AboutUs() {
           </section>
         </article>
         <section className="benevole">
-          <img
-            src={volunteers}
-            alt="bénévoles"
-            className="imgBenevole"
-            data-aos="fade-left"
-          />
+          <img src={volunteers} alt="bénévoles" className="imgBenevole" />
           <section className="contentBenevole">
-            <p data-aos="fade-right">
+            <p>
               Des bénévoles en informatique codent un programme qui est
               régulièrement adapté en fonction du modèle de données qui nous est
               proposé. Nous accueillons toutes les personnes physiques et
@@ -72,15 +62,15 @@ export default function AboutUs() {
               communication !
             </p>
 
-            <p data-aos="fade-right">
+            <p>
               La gestion de la base des adhérents est facilitée par HelloAsso.
             </p>
           </section>
         </section>
         <article className="presFounder">
-          <h2 data-aos="fade-left">Les fondateurs</h2>
+          <h2 className="titleFoudner">Les fondateurs</h2>
           <section className="contentFounder">
-            <p data-aos="fade-right">
+            <p>
               Cédric Brugnon et Guillaume Frémion ont travaillé pendant des
               années à la réduction de la consommation d&#39;énergie des
               bâtiments et se sont lancés dans cette problématiques sanitaire
@@ -103,23 +93,16 @@ export default function AboutUs() {
             </p>
           </section>
           <div className="img">
-            <img
-              src={sensors}
-              alt="capteurs"
-              className="imgFounder"
-              data-aos="fade-right"
-            />
+            <img src={sensors} alt="capteurs" className="imgFounder" />
             <img
               src={happyChild}
               alt="un enfant heureux"
               className="imgFounder"
-              data-aos="fade-left"
             />
             <img
               src={greenBuildings}
               alt="Batiments végétalisés"
               className="imgFounder"
-              data-aos="fade-right"
             />
           </div>
         </article>

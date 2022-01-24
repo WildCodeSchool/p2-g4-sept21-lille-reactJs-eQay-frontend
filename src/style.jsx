@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
     --font-family: 'Dekko', cursive;
   }
   
+  body {
+    width: 100%;
+  }
   `;
 
 export default GlobalStyle;
