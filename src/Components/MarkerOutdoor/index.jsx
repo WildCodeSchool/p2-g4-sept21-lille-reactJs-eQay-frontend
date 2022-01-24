@@ -136,29 +136,42 @@ export default function MarkerOutdoor() {
             <Popup>
               <SPopup>
                 <ul>
-                  {filterValue === 'no2' && e[0].no2 != null ? (
-                    <li>No2: {parseInt(e[0].no2, 10)} μg/m3</li>
+                  {filterValue === 'aqi' && e[0].aqi === null ? (
+                    <li>Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'o3' && e[0].o3 != null ? (
-                    <li>O3: {parseInt(e[0].o3, 10)} μg/m3</li>
+                  {filterValue === 'pm1' && e[0].pm1 === null ? (
+                    <li>Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'nox' && e[0].nox != null ? (
-                    <li>NOX: {parseInt(e[0].nox, 10)} μg/m3</li>
+                  {filterValue === 'pm25' && e[0].pm25 === null ? (
+                    <li>Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'no' && e[0].no != null ? (
-                    <li>No: {parseInt(e[0].no, 10)} μg/m3</li>
+                  {filterValue === 'pm10' && e[0].pm10 === null ? (
+                    <li>Pas de donnée</li>
+                  ) : null}
+                  {filterValue === 'ppm' && e[0].ppm === null ? (
+                    <li>Pas de donnée</li>
+                  ) : null}
+                  {filterValue === 'no2' ? (
+                    <li>No2:{parseInt(e[0].no2, 10)} μg/m3</li>
+                  ) : null}
+                  {filterValue === 'o3' ? (
+                    <li>O3:{parseInt(e[0].o3, 10)} μg/m3</li>
+                  ) : null}
+                  {filterValue === 'nox' ? (
+                    <li>NOX:{parseInt(e[0].nox, 10)} μg/m3</li>
+                  ) : null}
+                  {filterValue === 'no' ? (
+                    <li>No:{parseInt(e[0].no, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'pm10' && e[0].pm10 != null ? (
-                    <li>Pm10 : {parseInt(e[0].pm10, 10)} μg/m3</li>
+                    <li>Pm10 :{parseInt(e[0].pm10, 10)} μg/m3</li>
                   ) : null}
-                  {filterValue === 'pm25' && e[0].pm25 != null ? (
+                  {filterValue === 'pm25' ? (
                     <li>Pm25 : {parseInt(e[0].pm25, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'temperature' ? (
                     <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
-                  ) : (
-                    filterValue
-                  )}
+                  ) : null}
                   <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
                   {filterValue === 'humidity' ? (
                     <li>Humidité : {e[0].humidity} %</li>
