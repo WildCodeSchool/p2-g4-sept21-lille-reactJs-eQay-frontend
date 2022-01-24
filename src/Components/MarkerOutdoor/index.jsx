@@ -151,22 +151,22 @@ export default function MarkerOutdoor() {
                   {filterValue === 'ppm' && e[0].ppm === null ? (
                     <li>Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'no2' ? (
+                  {filterValue === 'no2' && e[0].no2 != null ? (
                     <li>No2:{parseInt(e[0].no2, 10)} μg/m3</li>
                   ) : null}
-                  {filterValue === 'o3' ? (
+                  {filterValue === 'o3' && e[0].o3 != null ? (
                     <li>O3:{parseInt(e[0].o3, 10)} μg/m3</li>
                   ) : null}
-                  {filterValue === 'nox' ? (
+                  {filterValue === 'nox' && e[0].nox != null ? (
                     <li>NOX:{parseInt(e[0].nox, 10)} μg/m3</li>
                   ) : null}
-                  {filterValue === 'no' ? (
+                  {filterValue === 'no' && e[0].no != null ? (
                     <li>No:{parseInt(e[0].no, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'pm10' && e[0].pm10 != null ? (
                     <li>Pm10 :{parseInt(e[0].pm10, 10)} μg/m3</li>
                   ) : null}
-                  {filterValue === 'pm25' ? (
+                  {filterValue === 'pm25' && e[0].pm25 === null ? (
                     <li>Pm25 : {parseInt(e[0].pm25, 10)} μg/m3</li>
                   ) : null}
                   {filterValue === 'temperature' ? (
