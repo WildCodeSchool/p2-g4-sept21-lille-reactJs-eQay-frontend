@@ -61,22 +61,31 @@ export default function MarkerIndoor() {
     if (filterValue === 'aqi' && value < 50) {
       return redAirIcon;
     }
-    if (filterValue === 'pm1' && value < 50) {
+    if (filterValue === 'pm1' && value < 10) {
       return greenAirIcon;
     }
-    if (filterValue === 'pm1' && value > 50) {
+    if (filterValue === 'pm1' && value > 10 && value <= 20) {
+      return yellowAirIcon;
+    }
+    if (filterValue === 'pm1' && value > 20) {
       return redAirIcon;
     }
-    if (filterValue === 'pm10' && value < 50) {
+    if (filterValue === 'pm10' && value < 20) {
       return greenAirIcon;
     }
-    if (filterValue === 'pm10' && value > 50) {
+    if (filterValue === 'pm10' && value > 20 && value <= 40) {
+      return yellowAirIcon;
+    }
+    if (filterValue === 'pm10' && value > 40) {
       return redAirIcon;
     }
-    if (filterValue === 'pm25' && value < 50) {
+    if (filterValue === 'pm25' && value < 15) {
       return greenAirIcon;
     }
-    if (filterValue === 'pm25' && value > 50) {
+    if (filterValue === 'pm25' && value > 15 && value <= 25) {
+      return yellowAirIcon;
+    }
+    if (filterValue === 'pm25' && value > 25) {
       return redAirIcon;
     }
     if (filterValue === 'ppm' && value < 50) {
@@ -84,6 +93,30 @@ export default function MarkerIndoor() {
     }
     if (filterValue === 'ppm' && value > 50) {
       return orangeAirIcon;
+    }
+    if (filterValue === 'temperature' && value < 18 && value > 24) {
+      return greenAirIcon;
+    }
+    if (
+      (filterValue === 'temperature' && value < 14 && value >= 18) ||
+      (value > 24 && value < 28)
+    ) {
+      return yellowAirIcon;
+    }
+    if ((filterValue === 'temperature' && value < 14) || value >= 28) {
+      return yellowAirIcon;
+    }
+    if (filterValue === 'humidity' && value >= 30 && value < 60) {
+      return greenAirIcon;
+    }
+    if (
+      (filterValue === 'humidity' && value >= 20 && value < 30) ||
+      (value >= 60 && value < 80)
+    ) {
+      return yellowAirIcon;
+    }
+    if ((filterValue === 'humidity' && value < 20) || value >= 80) {
+      return redAirIcon;
     }
     return yellowAirIcon;
   }
@@ -112,22 +145,24 @@ export default function MarkerIndoor() {
                     <li>Aqi : {parseInt(e[0].aqi, 10)}</li>
                   ) : null}
                   {filterValue === 'pm1' ? (
-                    <li>Pm1 : {parseInt(e[0].pm1, 10)}</li>
+                    <li>Pm1 : {parseInt(e[0].pm1, 10)} µg/m3</li>
                   ) : null}
                   {filterValue === 'pm10' ? (
-                    <li>Pm10 : {parseInt(e[0].pm10, 10)}</li>
+                    <li>Pm10 : {parseInt(e[0].pm10, 10)} µg/m3</li>
                   ) : null}
                   {filterValue === 'pm25' ? (
-                    <li>Pm25 : {parseInt(e[0].pm25, 10)}</li>
+                    <li>Pm2,5 : {parseInt(e[0].pm25, 10)} µg/m3</li>
                   ) : null}
                   {filterValue === 'ppm' ? (
-                    <li>Ppm : {parseInt(e[0].ppm, 10)}</li>
+                    <li>Ppm : {parseInt(e[0].ppm, 10)} mg/kg</li>
                   ) : null}
-                  {e[0].temperature && (
-                    <li>Température : {parseInt(e[0].temperature, 10)}</li>
-                  )}
+                  {filterValue === 'temperature' ? (
+                    <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
+                  ) : null}
                   <li>Date : {e[0].timestamp}</li>
-                  {e[0].humidity && <li>Humidité : {e[0].humidity}</li>}
+                  {filterValue === 'humidity' ? (
+                    <li>Humidité : {e[0].humidity} %</li>
+                  ) : null}
                 </ul>
                 <h2>Partager</h2>
                 <Share data={e[0]} />

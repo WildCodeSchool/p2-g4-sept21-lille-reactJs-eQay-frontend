@@ -22,7 +22,8 @@
     "react-share": "^4.4.0",
     "reset-css": "^5.0.1",
     "styled-components": "^5.3.3",
-    "styled-reset": "^4.3.4"
+    "styled-reset": "^4.3.4",
+    "usehooks-ts": "^2.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -52,6 +52,7 @@
 
 .bm-item-list {
   color: #b8b7ad;
+  overflow: hidden;
 }
 
 .bm-item {
