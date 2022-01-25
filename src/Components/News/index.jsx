@@ -1,6 +1,8 @@
 import indoorPollution from 'assets/pollution-interieur-air-sain_6098113.jpg';
-// import publicHealth from 'assets/sante-publique-france.png';
+import publicHealth from 'assets/sante-publique-france.png';
 import didYouKnow from 'assets/didYouKnow.png';
+import logoEcologie from 'assets/logoEcologie.png';
+import logoJuraBat from 'assets/logoJuraBat.png';
 import erp from 'assets/erp.png';
 import moreInformations from 'assets/info.png';
 import BurgerMenuMaps from 'Components/BurgerMenuMaps';
@@ -25,7 +27,7 @@ export default function News() {
           </div>
 
           <div className="imgContent">
-            <p className="contentNews" img={indoorPollution}>
+            <p className="contentNews">
               En moyenne nous passons quotidiennement 80% de notre temps à
               l&#39;intérieur de bâtiments dans lesquels l&#39;air que nous
               respirons peut être jusqu&#39;à 10x plus pollué qu&#39;à
@@ -40,11 +42,11 @@ export default function News() {
         </article>
         <section>
           <div className="headRegulation">
-            {/* <img
+            <img
               className="imgPublicHealth"
               src={publicHealth}
               alt="santé publique france"
-            /> */}
+            />
             <div className="titleRegulation">
               <h2>La Réglementation QAI en France</h2>
               <p>
@@ -112,18 +114,27 @@ export default function News() {
           </ul>
           <figure>
             <div className="moreInformation">
-              <img src={moreInformations} alt="Plus d'information" />
+              <img
+                className="moreInformationLogo"
+                src={moreInformations}
+                alt="Plus d'information"
+              />
               <div className="link">
                 <a href=" https://jurad-bat.net/collectivites/reglementation-QAI-france">
-                  https://jurad-bat.net/collectivites/reglementation-QAI-france
+                  <img className="linkLogo" src={logoJuraBat} alt="logoJura" />
                 </a>
                 <a href="https://www.ecologie.gouv.fr/qualite-lair-interieur">
-                  https://www.ecologie.gouv.fr/qualite-lair-interieur
+                  <img
+                    className="linkLogo"
+                    src={logoEcologie}
+                    alt="logoGouv"
+                    widht="10px"
+                  />
                 </a>
               </div>
             </div>
           </figure>
-          <p>
+          <p className="footNews">
             Parce qu&#39;une meilleur qualité d&#39;air est une priorité et
             qu&#39;il est possible d&#39;agir ensemble.
           </p>

@@ -21,6 +21,8 @@ const SNews = styled.article`
     width: 100%;
     z-index: 1;
     color: white;
+    color: #ffffff;
+    text-shadow: 4px 3px 0 #7a7a7aa8;
   }
   h3 {
     padding: 4vh;
@@ -37,25 +39,23 @@ const SNews = styled.article`
     height: 25vh;
   }
   .imgContent {
-    background-color: red;
     position: relative;
+    display: flex;
+    margin-left: 20vw;
     width: 100vw;
     height: 70%;
-    margin: auto;
   }
   .contentNews {
-    background: url(${(props) => props.img});
     position: absolute;
     width: 30%;
-    font-size: 22px;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
-    margin: auto;
-    margin: red solid 2px;
+    margin: 30px;
   }
   .imgIndoorPollution {
     display: flex;
-    border: solid 2px blue;
+    margin: auto;
     z-index: 1;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
@@ -107,16 +107,32 @@ const SNews = styled.article`
     margin-top: 15px;
   }
   .link {
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
   }
   .moreInformation {
     display: flex;
+    flex-direction: column;
     width: 70vw;
+  }
+  .moreInformationLogo {
+    margin: auto;
+    width: 20vw;
   }
   a {
     padding-bottom: 15px;
+    width: 30vw;
+  }
+  .footNews {
+    text-align: center;
+    font-weight: bold;
+  }
+  .linkLogo {
+    display: flex;
+
+    width: 15vw;
   }
 `;
 
