@@ -124,7 +124,6 @@ const SAboutUs = styled.article`
   .titleFounder {
     padding: 10px;
   }
-
   @media only screen and (max-width: 768px) {
     .headAboutUs {
       font-size: 30px;
@@ -134,7 +133,6 @@ const SAboutUs = styled.article`
       padding-left: 15px;
       clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 15vh);
     }
-
     .presAsso {
       clip-path: polygon(0 20%, 100% 5%, 100% 95%, 0 100%);
     }
