@@ -41,7 +41,6 @@ const greyAirIcon = new L.Icon({
 export default function MarkerIndoor() {
   const [allDataIndoors, setAllDataIndoors] = useState([]);
   const { filterValue } = useContext(EqaiContext);
-
   function changeToLocalDate(date) {
     const parseDate = Date.parse(date);
     const newdate = new Date(parseDate);
@@ -56,7 +55,6 @@ export default function MarkerIndoor() {
     });
     return localDate.replace(',', ' ');
   }
-
   useEffect(() => {
     try {
       axios.get('http://localhost:5050/indoor').then(({ data }) => {
