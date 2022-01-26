@@ -1,29 +1,27 @@
 import styled from 'styled-components';
 
 const SAboutUs = styled.article`
-  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
   .headAboutUs {
+    font-family: var(--font-family-first);
     position: fixed;
     clip-path: polygon(0 0, 100vw 0, 100vw 9vh, 0 20vh);
     background-image: linear-gradient(
       to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
+      rgba(126, 213, 111),
+      rgba(40, 180, 133)
     );
     background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
+      rgba($color-primary-light),
+      rgba($color-primary-dark)
     );
-    color: white;
+    color: var(--color-head-title);
+    font-weight: 400;
     height: 20vh;
     text-align: center;
-    font-size: 5vh;
+    font-size: 8vh;
     padding-top: 2%;
     width: 100%;
-    z-index: 1;
   }
   .imgMap {
     height: 40%;
@@ -42,7 +40,6 @@ const SAboutUs = styled.article`
     justify-content: center;
     flex-direction: column;
     margin: auto;
-    font-style: justify;
   }
   .contentWhyEqai,
   .contentPresAsso,
@@ -51,19 +48,22 @@ const SAboutUs = styled.article`
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
-    font-style: justify;
+    width: 36%;
   }
   h2 {
     text-align: center;
     padding: 20px;
     padding-top: 0;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
+    font-family: var(--font-family-first);
+    color: var(--color-paragraph-title);
   }
   p {
     margin: 10px;
-    font-style: justify;
+    text-align: justify;
+    color: var(--color-paragraph-content);
+    font-family: var(--font-family-second);
   }
   .imgData {
     height: 25%;
@@ -74,7 +74,6 @@ const SAboutUs = styled.article`
     display: flex;
     justify-content: space-evenly;
     flex-direction: row-reverse;
-    font-style: justify;
     width: 100%;
     background-image: linear-gradient(
       to right bottom,
@@ -133,6 +132,7 @@ const SAboutUs = styled.article`
       width: 100%;
       padding-top: 38px;
       padding-left: 15px;
+      clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 15vh);
     }
 
     .presAsso {
@@ -164,7 +164,6 @@ const SAboutUs = styled.article`
     .contentFounder {
       width: 75%;
       margin: auto;
-      text-align: justify;
       margin-bottom: 40px;
     }
     .img {
@@ -173,7 +172,9 @@ const SAboutUs = styled.article`
       width: 100%;
       align-items: center;
     }
-
+    p {
+      text-align: center;
+    }
     .presFounder {
       margin-top: 70px;
     }
