@@ -30,6 +30,7 @@ const redAirIcon = new L.Icon({
 });
 
 export default function MarkerOutdoor() {
+  const temp = 'temperature';
   const [allDataOutdoor, setAllDataOutdoor] = useState([]);
   const { filterValue } = useContext(EqaiContext);
   useEffect(() => {
@@ -163,6 +164,12 @@ export default function MarkerOutdoor() {
                   {filterValue === 'no' && e[0].no ? (
                     <li>NO : {e[0].no} µg-m3</li>
                   ) : null}
+                  {filterValue === 'temperature' && e[0][temp] ? (
+                    <li>NO : {e[0][temp]} °C</li>
+                  ) : null}
+                  {filterValue === 'humidity' && e[0].humidity ? (
+                    <li>NO : {e[0].humidity} %</li>
+                  ) : null}
                   {filterValue === 'aqi' && e[0].aqi === null ? (
                     <li>Aqi : Pas de donnée</li>
                   ) : null}
@@ -190,13 +197,13 @@ export default function MarkerOutdoor() {
                   {filterValue === 'no' && e[0].no === null ? (
                     <li>NO : Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'temperature' ? (
-                    <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
+                  {filterValue === 'temperature' && e[0][temp] === null ? (
+                    <li>Température : {e[0][temp]} °C</li>
                   ) : null}
-                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
-                  {filterValue === 'humidity' ? (
+                  {filterValue === 'humidity' && e[0].humidity === null ? (
                     <li>Humidité : {e[0].humidity} %</li>
                   ) : null}
+                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
                 </ul>
                 <h2>Partager</h2>
                 <Share data={e[0]} />
