@@ -198,10 +198,10 @@ export default function MarkerOutdoor() {
                     <li>NO : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'temperature' && e[0][temp] === null ? (
-                    <li>Température : {e[0][temp]} °C</li>
+                    <li>Température : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'humidity' && e[0].humidity === null ? (
-                    <li>Humidité : {e[0].humidity} %</li>
+                    <li>Humidité : Pas de donnée</li>
                   ) : null}
                   <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
                 </ul>
