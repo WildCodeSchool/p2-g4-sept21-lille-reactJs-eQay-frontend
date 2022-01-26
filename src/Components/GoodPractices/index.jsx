@@ -1,11 +1,11 @@
-import BurgerMenu from 'Components/BurgerMenu';
+import BurgerMenuMaps from 'Components/BurgerMenuMaps';
 import GlobalStyle from 'style';
 
 export default function GoodPractices() {
   return (
     <>
       <GlobalStyle />
-      <BurgerMenu />
+      <BurgerMenuMaps />
       <h1> Bonnes pratiques</h1>
     </>
   );
