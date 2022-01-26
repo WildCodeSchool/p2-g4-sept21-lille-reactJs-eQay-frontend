@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const SNews = styled.article`
   .headNews {
     position: fixed;
-    clip-path: polygon(0 0, 100vw 0, 100vw 9vh, 0 20vh);
+    clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 20vh);
     background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111),
@@ -20,14 +20,16 @@ const SNews = styled.article`
     padding-top: 3%;
     width: 100%;
     z-index: 1;
-    color: white;
-    color: #ffffff;
+    font-family: var(--font-family-first);
+    color: var(--color-head-title);
     text-shadow: 4px 3px 0 #7a7a7aa8;
   }
   h3 {
     padding: 4vh;
     text-align: center;
     font-size: 25px;
+    font-family: var(--font-family-first);
+    color: var(--color-paragraph-title);
   }
   .title {
     display: flex;
@@ -39,9 +41,7 @@ const SNews = styled.article`
     height: 25vh;
   }
   .imgContent {
-    position: relative;
-    display: flex;
-    margin-left: 20vw;
+    padding-left: 20vw;
     width: 100vw;
     height: 70%;
   }
@@ -83,8 +83,12 @@ const SNews = styled.article`
     padding: 4vh;
     text-align: center;
     font-size: 25px;
+    font-family: var(--font-family-first);
+    color: var(--color-paragraph-title);
   }
   p {
+    color: var(--color-paragraph-content);
+    font-family: var(--font-family-second);
     font-size: 18px;
     padding: 10px;
   }
@@ -98,9 +102,13 @@ const SNews = styled.article`
   ul {
     list-style-type: disc;
     padding: 0 0 0 40px;
+    color: var(--color-paragraph-content);
+    font-family: var(--font-family-second);
   }
   li {
     padding: 5px;
+    color: var(--color-paragraph-content);
+    font-family: var(--font-family-second);
   }
   .toKnow {
     background: #9e9e9e6e;
@@ -123,7 +131,10 @@ const SNews = styled.article`
   }
   a {
     padding-bottom: 15px;
-    width: 30vw;
+    width: 15vw;
+  }
+  a:hover {
+    background: none;
   }
   .footNews {
     text-align: center;
@@ -131,8 +142,66 @@ const SNews = styled.article`
   }
   .linkLogo {
     display: flex;
-
     width: 15vw;
+  }
+  @media only screen and (max-width: 768px) {
+    .headNews {
+      clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 15vh);
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+      padding-top: 38px;
+      padding-left: 15px;
+    }
+    .title {
+      padding-top: 15vh;
+    }
+    h3 {
+      font-size: 20px;
+      padding: 10px;
+    }
+    .imgDidYouKnow {
+      height: 10vh;
+      padding: 10px;
+    }
+    .imgContent {
+      width: 100vw;
+      padding-left: 10px;
+    }
+    .contentNews {
+      font-size: 1.15rem;
+      font-size: 1.2rem;
+      width: 90vw;
+      margin: 95px 30px 0 0;
+      background-color: #d4d4d478;
+    }
+    .imgIndoorPollution {
+      width: 95%;
+    }
+    .headRegulation {
+      margin: 10px;
+    }
+    .organigramme {
+      width: 100vw;
+    }
+    .regulation {
+      width: 90vw;
+    }
+    .link {
+      justify-content: space-between;
+      margin: auto;
+      padding-right: 50px;
+      width: 90%;
+    }
+    .moreInformation {
+      margin: auto;
+    }
+    .moreInformationLogo {
+      width: 40vw;
+    }
+    .linkLogo {
+      width: 30vw;
+    }
   }
 `;
 
