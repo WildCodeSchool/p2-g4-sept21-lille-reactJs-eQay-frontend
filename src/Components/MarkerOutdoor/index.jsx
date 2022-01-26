@@ -136,38 +136,59 @@ export default function MarkerOutdoor() {
             <Popup>
               <SPopup>
                 <ul>
+                  {filterValue === 'aqi' && e[0].aqi ? (
+                    <li>Aqi : {e[0].aqi}</li>
+                  ) : null}
+                  {filterValue === 'pm1' && e[0].pm1 ? (
+                    <li>Pm1 : {e[0].pm1} µg/m3</li>
+                  ) : null}
+                  {filterValue === 'pm25' && e[0].pm25 ? (
+                    <li>Pm25 : {e[0].pm25} µg/m3</li>
+                  ) : null}
+                  {filterValue === 'pm10' && e[0].pm10 ? (
+                    <li>Pm10 : {e[0].pm10} µg/m3</li>
+                  ) : null}
+                  {filterValue === 'ppm' && e[0].ppm ? (
+                    <li>Ppm : {e[0].ppm} mg/kg</li>
+                  ) : null}
+                  {filterValue === 'no2' && e[0].no2 ? (
+                    <li>NO2 : {e[0].no2} µg-m3</li>
+                  ) : null}
+                  {filterValue === 'o3' && e[0].o3 ? (
+                    <li>O3 : {e[0].o3} µg-m3</li>
+                  ) : null}
+                  {filterValue === 'nox' && e[0].nox ? (
+                    <li>Nox : {e[0].nox} µg-m3</li>
+                  ) : null}
+                  {filterValue === 'no' && e[0].no ? (
+                    <li>NO : {e[0].no} µg-m3</li>
+                  ) : null}
                   {filterValue === 'aqi' && e[0].aqi === null ? (
-                    <li>Pas de donnée</li>
+                    <li>Aqi : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'pm1' && e[0].pm1 === null ? (
-                    <li>Pas de donnée</li>
+                    <li>Pm1 : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'pm25' && e[0].pm25 === null ? (
-                    <li>Pas de donnée</li>
+                    <li>Pm25 : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'pm10' && e[0].pm10 === null ? (
-                    <li>Pas de donnée</li>
+                    <li>Pm10 : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'ppm' && e[0].ppm === null ? (
-                    <li>Pas de donnée</li>
+                    <li>Ppm : Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'no2' && e[0].no2 != null ? (
-                    <li>No2:{parseInt(e[0].no2, 10)} μg/m3</li>
+                  {filterValue === 'no2' && e[0].no2 === null ? (
+                    <li>NO2 : Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'o3' && e[0].o3 != null ? (
-                    <li>O3:{parseInt(e[0].o3, 10)} μg/m3</li>
+                  {filterValue === 'o3' && e[0].o3 === null ? (
+                    <li>O3 : Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'nox' && e[0].nox != null ? (
-                    <li>NOX:{parseInt(e[0].nox, 10)} μg/m3</li>
+                  {filterValue === 'nox' && e[0].nox === null ? (
+                    <li>Nox : Pas de donnée</li>
                   ) : null}
-                  {filterValue === 'no' && e[0].no != null ? (
-                    <li>No:{parseInt(e[0].no, 10)} μg/m3</li>
-                  ) : null}
-                  {filterValue === 'pm10' && e[0].pm10 != null ? (
-                    <li>Pm10 :{parseInt(e[0].pm10, 10)} μg/m3</li>
-                  ) : null}
-                  {filterValue === 'pm25' && e[0].pm25 === null ? (
-                    <li>Pm25 : {parseInt(e[0].pm25, 10)} μg/m3</li>
+                  {filterValue === 'no' && e[0].no === null ? (
+                    <li>NO : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'temperature' ? (
                     <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
