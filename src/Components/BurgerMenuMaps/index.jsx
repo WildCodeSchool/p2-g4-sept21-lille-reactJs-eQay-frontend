@@ -27,6 +27,9 @@ export default function BurgerMenuMaps() {
         <Link id="about" className="menuItem" to="/aboutus">
           Qui sommes-nous?
         </Link>
+        <Link id="about" className="menuItem" to="/moreinfo">
+          En savoir plus
+        </Link>
         <a
           id="supportus"
           className="menuItem"
