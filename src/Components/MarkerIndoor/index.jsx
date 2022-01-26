@@ -41,7 +41,20 @@ const greyAirIcon = new L.Icon({
 export default function MarkerIndoor() {
   const [allDataIndoors, setAllDataIndoors] = useState([]);
   const { filterValue } = useContext(EqaiContext);
-
+  function changeToLocalDate(date) {
+    const parseDate = Date.parse(date);
+    const newdate = new Date(parseDate);
+    const localDate = newdate.toLocaleString(navigator.language, {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    });
+    return localDate.replace(',', ' ');
+  }
   useEffect(() => {
     try {
       axios.get('http://localhost:5050/indoor').then(({ data }) => {
@@ -159,7 +172,7 @@ export default function MarkerIndoor() {
                   {filterValue === 'temperature' ? (
                     <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
                   ) : null}
-                  <li>Date : {e[0].timestamp}</li>
+                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
                   {filterValue === 'humidity' ? (
                     <li>Humidité : {e[0].humidity} %</li>
                   ) : null}
