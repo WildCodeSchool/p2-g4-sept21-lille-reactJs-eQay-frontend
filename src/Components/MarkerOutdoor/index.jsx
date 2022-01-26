@@ -159,7 +159,7 @@ export default function MarkerOutdoor() {
                     <li>O3 : {e[0].o3} µg-m3</li>
                   ) : null}
                   {filterValue === 'nox' && e[0].nox ? (
-                    <li>Nox : {e[0].nox} µg-m3</li>
+                    <li>NOx : {e[0].nox} µg-m3</li>
                   ) : null}
                   {filterValue === 'no' && e[0].no ? (
                     <li>NO : {e[0].no} µg-m3</li>
@@ -192,7 +192,7 @@ export default function MarkerOutdoor() {
                     <li>O3 : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'nox' && e[0].nox === null ? (
-                    <li>Nox : Pas de donnée</li>
+                    <li>NOx : Pas de donnée</li>
                   ) : null}
                   {filterValue === 'no' && e[0].no === null ? (
                     <li>NO : Pas de donnée</li>
