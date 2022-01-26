@@ -1,5 +1,4 @@
 import indoorPollution from 'assets/pollution-interieur-air-sain_6098113.jpg';
-// import publicHealth from 'assets/sante-publique-france.png';
 import didYouKnow from 'assets/didYouKnow.png';
 import logoEcologie from 'assets/logoEcologie.png';
 import logoJuraBat from 'assets/logoJuraBat.png';
@@ -42,11 +41,6 @@ export default function News() {
         </article>
         <section>
           <div className="headRegulation">
-            {/* <img
-              className="imgPublicHealth"
-              src={publicHealth}
-              alt="santé publique france"
-            /> */}
             <div className="titleRegulation">
               <h2>La Réglementation QAI en France</h2>
               <p>
