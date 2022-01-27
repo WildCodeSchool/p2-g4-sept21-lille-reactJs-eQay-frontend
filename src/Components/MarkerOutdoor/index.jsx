@@ -6,7 +6,6 @@ import greenAirExt from 'assets/greenAirExt.png';
 import orangeAirExt from 'assets/orangeAirExt.png';
 import redAirExt from 'assets/redAirExt.png';
 import greyAirExt from 'assets/greyAirExt.png';
-
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import Share from 'Components/ShareButton';
