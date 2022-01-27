@@ -49,6 +49,55 @@ const SMap = styled.div`
     width: 100vw;
     z-index: 1;
   }
+  .legend {
+    display: grid;
+    grid-template-columns: auto / auto;
+    line-height: 18px;
+    color: #555;
+    background-color: white;
+  }
+  .legend i {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.8;
+  }
+  .legend-title {
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .legend-title a {
+    margin-left: 1rem;
+  }
+  .leaflet-left,
+  .leaflet-control {
+    margin-left: 10px;
+  }
+  .leaflet-bottom,
+  .leaflet-control {
+    margin-bottom: 10px;
+  }
+  .leaflet-left,
+  .leaflet-control {
+    margin-left: 10px;
+  }
+  .leaflet-bottom,
+  .leaflet-control {
+    margin-bottom: 10px;
+  }
+  .color-row {
+    grid-column: 1/2;
+    padding: 5px 10px;
+  }
+  .legend-atmo {
+    grid-column: 2/3;
+    padding: 3px 8px;
+    display: inline;
+  }
   @media only screen and (max-width: 480px) {
     nav {
       margin: 2vh 3vw;
