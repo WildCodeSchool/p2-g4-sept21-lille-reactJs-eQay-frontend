@@ -52,18 +52,7 @@ export default function MarkerIndoor() {
     return localDate.replace(',', ' ');
   }
 
-  useEffect(() => {
-    try {
-      axios.get('http://localhost:5050/indoor').then(({ data }) => {
-        const finalData = data.filter((value) => value[0].type === 'Int');
-        setAllDataIndoors(finalData);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
-  useEffect(() => {
+  const updateMarkers = () => {
     const tmpMarkers = allDataIndoors.map((e) => {
       const value = e[0][filterValue];
       let icon = greyAirIcon;
@@ -155,7 +144,20 @@ export default function MarkerIndoor() {
       );
     });
     setMarkers(tmpMarkers);
-  }, [filterValue]);
+  };
+
+  useEffect(() => {
+    try {
+      axios.get('http://localhost:5050/indoor').then(({ data }) => {
+        const finalData = data.filter((value) => value[0].type === 'Int');
+        setAllDataIndoors(finalData);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+  useEffect(updateMarkers, [allDataIndoors]);
+  useEffect(updateMarkers, [filterValue]);
 
   return (
     <MarkerIndoorGroup
