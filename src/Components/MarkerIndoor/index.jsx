@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
 import L from 'leaflet';
+import dotenv from 'dotenv';
 import greenAir from 'assets/greenAir.png';
 import yellowAir from 'assets/yellowAir.png';
 import orangeAir from 'assets/orangeAir.png';
@@ -12,6 +13,8 @@ import Share from 'Components/ShareButton';
 import SPopup from './style';
 import './index.css';
 import EqaiContext from '../../Context/EqaiContext';
+
+dotenv.config();
 
 const greenAirIcon = new L.Icon({
   iconUrl: greenAir,
@@ -57,7 +60,7 @@ export default function MarkerIndoor() {
   }
   useEffect(() => {
     try {
-      axios.get('http://localhost:5050/indoor').then(({ data }) => {
+      axios.get(`${process.env.REACT_APP_API_URL}/indoor`).then(({ data }) => {
         setAllDataIndoors(data);
       });
     } catch (error) {
