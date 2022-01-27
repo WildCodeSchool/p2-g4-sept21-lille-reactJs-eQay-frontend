@@ -16,7 +16,7 @@ export default function MoreInfo() {
               <img alt="test " src={Seuil} />
             </li>
             <h2 className="deco title">
-              Comfort en fonction de l&apos;humidité et de la température de
+              Confort en fonction de l&apos;humidité et de la température de
               l&apos;air
             </h2>
             <li>
