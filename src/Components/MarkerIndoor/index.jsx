@@ -172,7 +172,9 @@ export default function MarkerIndoor() {
                   {filterValue === 'temperature' ? (
                     <li>Température : {parseInt(e[0].temperature, 10)} °c</li>
                   ) : null}
-                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
+                  <li className="date">
+                    Date : {changeToLocalDate(e[0].timestamp)}
+                  </li>
                   {filterValue === 'humidity' ? (
                     <li>Humidité : {e[0].humidity} %</li>
                   ) : null}
