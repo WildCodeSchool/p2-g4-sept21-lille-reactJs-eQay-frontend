@@ -203,7 +203,9 @@ export default function MarkerOutdoor() {
                   {filterValue === 'humidity' && e[0].humidity === null ? (
                     <li>Humidité : Pas de donnée</li>
                   ) : null}
-                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
+                  <li className="date">
+                    Date : {changeToLocalDate(e[0].timestamp)}
+                  </li>
                 </ul>
                 <h2>Partager</h2>
                 <Share data={e[0]} />
