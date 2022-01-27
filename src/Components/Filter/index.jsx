@@ -26,6 +26,8 @@ export default function Filter() {
         <option value="o3">O3</option>
         <option value="nox">Nox</option>
         <option value="no">NO</option>
+        <option value="temperature">Température</option>
+        <option value="humidity">Humidité</option>
       </SSelect>
     </>
   );
