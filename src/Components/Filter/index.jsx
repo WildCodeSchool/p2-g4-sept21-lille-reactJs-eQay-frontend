@@ -13,10 +13,7 @@ export default function Filter() {
           setFilterValue(e.target.value);
         }}
       >
-        <h3>test</h3>
-        <option selected disabled>
-          Choisir une mesure
-        </option>
+        <option disabled>Choisir une mesure</option>
         <option value="aqi">Aqi </option>
         <option value="pm1">Pm1</option>
         <option value="pm25">Pm25</option>
