@@ -15,7 +15,7 @@ export default function Filter() {
       >
         <h3>test</h3>
         <option selected disabled>
-          Choisir une mesure
+          Filtre
         </option>
         <option value="aqi">Aqi </option>
         <option value="pm1">Pm1</option>
