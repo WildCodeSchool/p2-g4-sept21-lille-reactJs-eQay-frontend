@@ -1,11 +1,11 @@
-import BurgerMenu from 'Components/BurgerMenu';
+import BurgerMenuMaps from 'Components/BurgerMenuMaps';
 import GlobalStyle from 'style';
 
 export default function Event() {
   return (
     <>
       <GlobalStyle />
-      <BurgerMenu />
+      <BurgerMenuMaps />
       <h1> Evénements</h1>
     </>
   );
