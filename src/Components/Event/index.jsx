@@ -16,7 +16,7 @@ export default function Event() {
               Afin de pouvoir se développer largement et dans les plus brefs
               délais, nous sommes actuellement à la recherche d&#39;un(e)
               développeur/euse front et back-end afin d&#39;optimiser le
-              fonctionnement du service d&#39;information eQAI
+              fonctionnement du service d&#39;information eQAI.
             </p>
             <img
               className="imgFrontBack"
