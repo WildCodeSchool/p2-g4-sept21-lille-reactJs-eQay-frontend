@@ -9,7 +9,7 @@ export default function LocateUsers() {
 
   useEffect(() => {
     if (findUser) {
-      map.locate().on('locationfound', function (e) {
+      map.locate().on('locationfound', (e) => {
         setPosition(e.latlng);
         map.setView([e.latlng.lat, e.latlng.lng], 14);
       });
