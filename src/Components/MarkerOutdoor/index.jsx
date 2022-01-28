@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
+import dotenv from 'dotenv';
 import L from 'leaflet';
 import blueAirExt from 'assets/blueAirExt.png';
 import greenAirExt from 'assets/greenAirExt.png';
@@ -12,6 +13,8 @@ import Share from 'Components/ShareButton';
 import SPopup from './style';
 import './index.css';
 import EqaiContext from '../../Context/EqaiContext';
+
+dotenv.config();
 
 const blueAirIcon = new L.Icon({
   iconUrl: blueAirExt,
@@ -40,7 +43,7 @@ export default function MarkerOutdoor() {
   const { filterValue } = useContext(EqaiContext);
   useEffect(() => {
     try {
-      axios.get('http://localhost:5050/indoor').then(({ data }) => {
+      axios.get(`${process.env.REACT_APP_API_URL}/indoor`).then(({ data }) => {
         setAllDataOutdoor(data);
       });
     } catch (error) {

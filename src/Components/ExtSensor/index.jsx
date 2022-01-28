@@ -1,10 +1,13 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 import { useState, useEffect } from 'react';
 import { Marker, Popup, useMap } from 'react-leaflet';
 
 export default function ExtSensor() {
   const [position, setPosition] = useState(null);
   const [closerSensor, setCloserSensor] = useState(null);
+
+  dotenv.config();
 
   const map = useMap();
 
@@ -21,8 +24,10 @@ export default function ExtSensor() {
   useEffect(async () => {
     if (position) {
       axios
-        .get(`http://localhost:5050/outdoor/${position.lat}&${position.lng}`)
-        .then(({ data }) => {
+        .get(
+          `${process.env.REACT_APP_API_URL}/outdoor/${position.lat}&${position.lng}`
+        )
+        .then(function ({ data }) {
           setCloserSensor(data);
         });
     }
