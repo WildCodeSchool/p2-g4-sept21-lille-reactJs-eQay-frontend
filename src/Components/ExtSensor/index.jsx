@@ -22,7 +22,7 @@ export default function ExtSensor() {
     if (position) {
       axios
         .get(`http://localhost:5050/outdoor/${position.lat}&${position.lng}`)
-        .then(function ({ data }) {
+        .then(({ data }) => {
           setCloserSensor(data);
         });
     }
