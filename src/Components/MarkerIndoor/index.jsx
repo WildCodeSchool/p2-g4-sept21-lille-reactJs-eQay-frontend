@@ -182,7 +182,7 @@ export default function MarkerIndoor() {
   useEffect(() => {
     try {
       axios.get(`${process.env.REACT_APP_API_URL}/indoor`).then(({ data }) => {
-        const finalData = data.filter((value) => value[0].type === 'Int');
+        const finalData = data.filter((value) => value.length);
         setAllDataIndoors(finalData);
       });
     } catch (error) {

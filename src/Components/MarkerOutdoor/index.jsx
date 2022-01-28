@@ -178,8 +178,8 @@ export default function MarkerOutdoor() {
 
   useEffect(() => {
     try {
-      axios.get(`${process.env.REACT_APP_API_URL}/indoor`).then(({ data }) => {
-        const finalData = data.filter((value) => value[0].type === 'Ext');
+      axios.get(`${process.env.REACT_APP_API_URL}/outdoor`).then(({ data }) => {
+        const finalData = data.filter((value) => value.length);
         setAllDataOutdoor(finalData);
       });
     } catch (error) {
