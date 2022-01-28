@@ -3,7 +3,6 @@ import actu from 'assets/actu.png';
 import imgFrontBack from 'assets/frontBackEnd.png';
 import SEvent from './style';
 
-
 export default function Event() {
   return (
     <>
