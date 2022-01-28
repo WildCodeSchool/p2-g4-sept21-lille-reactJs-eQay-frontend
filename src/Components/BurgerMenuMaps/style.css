@@ -27,13 +27,13 @@
 
 .bm-menu-wrap {
   position: fixed;
-  height: 100%;
+  min-height: 100%;
 }
 
 .bm-menu {
   background-color: white;
   width: 95%;
-  -ms-overflow-style: none;
+  height: 100%;
   -webkit-border-top-right-radius: 20px;
   -webkit-border-bottom-right-radius: 20px;
   -moz-border-radius-topright: 20px;
@@ -59,8 +59,7 @@ a {
   display: inline-block;
   text-decoration: none;
   color: var(--color-secondary);
-  margin: 30px 0;
-  padding-left: 20px;
+  padding: 15px;
   font-size: 18px;
 }
 
@@ -74,11 +73,20 @@ a:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.footer:hover {
+  background-color: transparent;
+  color: var(--color-secondary);
+}
+
 .followUs {
   text-align: center;
-  padding-bottom: 8%;
   font-size: 22px;
   pointer-events: none;
+  padding-bottom: 30px;
+}
+
+.followUs:hover {
+  background-color: white;
 }
 
 .imgLogo {
@@ -90,17 +98,25 @@ a:hover {
   cursor: pointer;
 }
 
+.allLogo {
+  padding-bottom: 20px;
+}
+
+.imgLogo:hover,
+.allLogo:hover {
+  background-color: white;
+}
+
 .legalMention {
   text-align: center;
-  padding-top: 20%;
   pointer-events: none;
 }
 
 .copyright {
   font-style: italic;
   text-align: center;
-  padding: 12%;
   font-size: 13px;
+  padding-top: 20px;
   pointer-events: none;
 }
 
@@ -117,6 +133,12 @@ a:hover {
     text-align: center;
   }
 
+  .bm-item,
+  a {
+    margin: 15px;
+    font-size: 18px;
+  }
+
   .bm-cross-button {
     height: 30px;
     width: 30px;
@@ -124,14 +146,17 @@ a:hover {
     left: 90vw;
   }
 
-  .footerBurger {
-    display: flex;
-    pointer-events: none;
+  .footer {
+    margin-top: 30px;
   }
 
   .followUs {
-    padding-bottom: 8px;
     font-size: 30px;
+    padding-bottom: 15px;
+  }
+
+  .allLogo {
+    padding-bottom: 15px;
   }
 
   .copyright {
