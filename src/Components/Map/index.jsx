@@ -68,7 +68,6 @@ export default function Map() {
               </div>
             </div>
           </div>
-
           <MapContainer
             center={[46.227, 2.213]}
             zoom={6}
