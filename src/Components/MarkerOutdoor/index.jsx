@@ -9,6 +9,7 @@ import yellowAirExt from 'assets/yellowAirExt.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import Share from 'Components/ShareButton';
+import Spinner from 'Components/Spinner';
 import SPopup from './style';
 import './index.css';
 import EqaiContext from '../../Context/EqaiContext';
@@ -35,6 +36,7 @@ const greyAirIcon = new L.Icon({
 export default function MarkerOutdoor() {
   const [allDataOutdoor, setAllDataOutdoor] = useState([]);
   const [markers, setMarkers] = useState(<></>);
+  const [loading, setLoading] = useState(false);
   const { filterValue } = useContext(EqaiContext);
 
   function changeToLocalDate(date) {
@@ -187,7 +189,11 @@ export default function MarkerOutdoor() {
     }
   }, []);
   useEffect(updateMarkers, [allDataOutdoor]);
-  useEffect(updateMarkers, [filterValue]);
+  useEffect(() => {
+    setLoading(true);
+    updateMarkers();
+    setLoading(false);
+  }, [filterValue]);
 
   return (
     <MarkerIndoorGroup
@@ -200,7 +206,7 @@ export default function MarkerOutdoor() {
         });
       }}
     >
-      {markers}
+      {loading ? <Spinner /> : markers}
     </MarkerIndoorGroup>
   );
 }
