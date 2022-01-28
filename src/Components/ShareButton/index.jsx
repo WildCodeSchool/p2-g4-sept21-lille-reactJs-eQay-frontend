@@ -72,9 +72,9 @@ export default function Share({ data }) {
 }
 
 Share.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape()),
+  data: PropTypes.shape(),
 };
 
 Share.defaultProps = {
-  data: [],
+  data: {},
 };

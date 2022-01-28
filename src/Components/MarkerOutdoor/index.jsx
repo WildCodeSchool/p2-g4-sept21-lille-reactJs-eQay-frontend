@@ -6,6 +6,7 @@ import blueAirExt from 'assets/blueAirExt.png';
 import greenAirExt from 'assets/greenAirExt.png';
 import orangeAirExt from 'assets/orangeAirExt.png';
 import redAirExt from 'assets/redAirExt.png';
+import greyAirExt from 'assets/greyAirExt.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import Share from 'Components/ShareButton';
@@ -31,6 +32,10 @@ const redAirIcon = new L.Icon({
   iconUrl: redAirExt,
   iconSize: [25, 25],
 });
+const greyAirIcon = new L.Icon({
+  iconUrl: greyAirExt,
+  iconSize: [25, 25],
+});
 
 export default function MarkerOutdoor() {
   const temp = 'temperature';
@@ -53,9 +58,46 @@ export default function MarkerOutdoor() {
       (filterValue === 'no2' && value === null) ||
       (filterValue === 'o3' && value === null) ||
       (filterValue === 'nox' && value === null) ||
-      (filterValue === 'no' && value === null)
+      (filterValue === 'no' && value === null) ||
+      (filterValue === 'aqi' && value === null)
     ) {
-      return blueAirIcon;
+      return greyAirIcon;
+    }
+    if (filterValue === 'no2' && (value === 0 || value < 20)) {
+      return greenAirIcon;
+    }
+    if (filterValue === 'no2' && (value > 20 || value <= 40)) {
+      return orangeAirIcon;
+    }
+    if (filterValue === 'no2' && value > 40) {
+      return redAirIcon;
+    }
+    if (filterValue === 'no' && (value === 0 || value < 20)) {
+      return greenAirIcon;
+    }
+    if (filterValue === 'no' && (value > 20 || value <= 40)) {
+      return orangeAirIcon;
+    }
+    if (filterValue === 'no' && value > 40) {
+      return redAirIcon;
+    }
+    if (filterValue === 'o3' && (value === 0 || value < 20)) {
+      return greenAirIcon;
+    }
+    if (filterValue === 'o3' && (value > 20 || value <= 40)) {
+      return orangeAirIcon;
+    }
+    if (filterValue === 'o3' && value > 40) {
+      return redAirIcon;
+    }
+    if (filterValue === 'nox' && (value === 0 || value < 20)) {
+      return greenAirIcon;
+    }
+    if (filterValue === 'nox' && (value > 20 || value <= 40)) {
+      return orangeAirIcon;
+    }
+    if (filterValue === 'nox' && value > 40) {
+      return redAirIcon;
     }
     if (filterValue === 'pm10' && (value === 0 || value < 20)) {
       return greenAirIcon;
@@ -206,7 +248,9 @@ export default function MarkerOutdoor() {
                   {filterValue === 'humidity' && e[0].humidity === null ? (
                     <li>Humidité : Pas de donnée</li>
                   ) : null}
-                  <li>Date : {changeToLocalDate(e[0].timestamp)}</li>
+                  <li className="date">
+                    Date : {changeToLocalDate(e[0].timestamp)}
+                  </li>
                 </ul>
                 <h2>Partager</h2>
                 <Share data={e[0]} />

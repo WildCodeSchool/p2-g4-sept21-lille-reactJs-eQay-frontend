@@ -13,6 +13,9 @@ const SPopup = styled.div`
     margin-top: 5px;
     padding-top: 5px;
   }
+  .date {
+    text-transform: capitalize;
+  }
 `;
 
 export default SPopup;

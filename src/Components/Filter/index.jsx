@@ -13,10 +13,7 @@ export default function Filter() {
           setFilterValue(e.target.value);
         }}
       >
-        <h3>test</h3>
-        <option selected disabled>
-          Choisir une mesure
-        </option>
+        <option disabled>Filtre</option>
         <option value="aqi">Aqi </option>
         <option value="pm1">Pm1</option>
         <option value="pm25">Pm25</option>
@@ -26,6 +23,8 @@ export default function Filter() {
         <option value="o3">O3</option>
         <option value="nox">Nox</option>
         <option value="no">NO</option>
+        <option value="temperature">Température</option>
+        <option value="humidity">Humidité</option>
       </SSelect>
     </>
   );
