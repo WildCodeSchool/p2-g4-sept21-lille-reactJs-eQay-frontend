@@ -98,6 +98,34 @@ export default function MarkerIndoor() {
           if (value < 50) icon = greenAirIcon;
           else icon = redAirIcon;
           break;
+        case 'no2':
+          filter = 'NO2';
+          unit = 'mg/kg';
+          displayValue = parseInt(e[0].no2, 10);
+          if (value < 50) icon = greenAirIcon;
+          else icon = redAirIcon;
+          break;
+        case 'o3':
+          filter = 'O3';
+          unit = 'mg/kg';
+          displayValue = parseInt(e[0].o3, 10);
+          if (value < 50) icon = greenAirIcon;
+          else icon = redAirIcon;
+          break;
+        case 'nox':
+          filter = 'Nox';
+          unit = 'mg/kg';
+          displayValue = parseInt(e[0].nox, 10);
+          if (value < 50) icon = greenAirIcon;
+          else icon = redAirIcon;
+          break;
+        case 'no':
+          filter = 'NO';
+          unit = 'mg/kg';
+          displayValue = parseInt(e[0].no, 10);
+          if (value < 50) icon = greenAirIcon;
+          else icon = redAirIcon;
+          break;
         case 'temperature':
           filter = 'Température';
           unit = '°C';
@@ -118,8 +146,10 @@ export default function MarkerIndoor() {
           icon = greyAirIcon;
           break;
       }
-      if (value <= 0) {
+      if (value <= 0 || Number.isNaN(value)) {
         icon = greyAirIcon;
+        unit = '';
+        displayValue = 'Pas de mesure';
       }
 
       return (
