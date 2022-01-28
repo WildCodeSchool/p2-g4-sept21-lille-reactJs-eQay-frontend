@@ -9,6 +9,7 @@ import greyAir from 'assets/greyAir.png';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerIndoorGroup from 'react-leaflet-markercluster';
 import Share from 'Components/ShareButton';
+import Spinner from 'Components/Spinner';
 import SPopup from './style';
 import './index.css';
 import EqaiContext from '../../Context/EqaiContext';
@@ -38,6 +39,7 @@ const greyAirIcon = new L.Icon({
 export default function MarkerIndoor() {
   const [allDataIndoors, setAllDataIndoors] = useState([]);
   const [markers, setMarkers] = useState(<></>);
+  const [loading, setLoading] = useState(false);
   const { filterValue } = useContext(EqaiContext);
 
   function changeToLocalDate(date) {
@@ -190,7 +192,11 @@ export default function MarkerIndoor() {
     }
   }, []);
   useEffect(updateMarkers, [allDataIndoors]);
-  useEffect(updateMarkers, [filterValue]);
+  useEffect(() => {
+    setLoading(true);
+    updateMarkers();
+    setLoading(false);
+  }, [filterValue]);
 
   return (
     <MarkerIndoorGroup
@@ -203,7 +209,7 @@ export default function MarkerIndoor() {
         });
       }}
     >
-      {markers}
+      {loading ? <Spinner /> : markers}
     </MarkerIndoorGroup>
   );
 }
