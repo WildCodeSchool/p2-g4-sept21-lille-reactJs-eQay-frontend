@@ -1,7 +1,7 @@
 import BurgerMenuMaps from 'Components/BurgerMenuMaps';
 import SMoreInfo from './styles';
-import Seuil from '../../assets/Seuil.jpg';
-import Confort from '../../assets/Confort.jpg';
+import Seuil from '../../assets/Seuil.png';
+import Confort from '../../assets/Confort.png';
 
 export default function MoreInfo() {
   return (
@@ -15,13 +15,15 @@ export default function MoreInfo() {
             <li>
               <img alt="test " src={Seuil} />
             </li>
-            <h2 className="deco title">
-              Confort en fonction de l&apos;humidité et de la température de
-              l&apos;air
-            </h2>
-            <li>
-              <img alt="test " src={Confort} />
-            </li>
+            <div className="confort">
+              <h2 className="decoTitle">
+                Confort en fonction de l&apos;humidité et de la température de
+                l&apos;air
+              </h2>
+              <li>
+                <img className="imgConfort" alt="test" src={Confort} />
+              </li>
+            </div>
           </ul>
         </article>
       </SMoreInfo>

@@ -13,58 +13,52 @@ const SMoreInfo = styled.main`
   }
   h2 {
     text-align: center;
-    font-size: 40px;
-    padding: 1vh;
+    padding: 3vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-family-first);
+    color: var(--color-paragraph-title);
   }
   .mesure {
     padding-top: 20vh;
   }
-  .title {
-    margin-top: 5vh;
+  .confort {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    background-image: var(--color-polygone);
+  }
+  .imgConfort {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-height: 579px;
+    max-width: 819px;
   }
   .moreInfo {
     position: fixed;
     clip-path: polygon(0 0, 100vw 0, 100vw 9vh, 0 20vh);
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111),
-      rgba(40, 180, 133)
-    );
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light),
-      rgba($color-primary-dark)
-    );
-    color: white;
+    background-image: var(--color-polygone);
+    font-family: var(--font-family-first);
+    color: var(--color-head-title);
     height: 20vh;
     text-align: center;
-    font-size: 5vh;
-    padding-top: 2%;
+    font-size: 8vh;
+    width: 100%;
+    padding-top: 38px;
+    padding-left: 15px;
     width: 100%;
     z-index: 1;
+    text-shadow: var(--text-shadow);
   }
-  .deco {
-    display: flex;
-    color: white;
-    height: 10vh;
-    justify-content: space-evenly;
-    align-items: center;
-    font-style: justify;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111),
-      rgba(40, 180, 133)
-    );
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light),
-      rgba($color-primary-dark)
-    );
-    clip-path: polygon(0 10%, 100% 0, 100% 95%, 0 100%);
-  }
+
   @media only screen and (max-width: 768px) {
-    img {
-      width: 100vw;
+    .moreInfo {
+      clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 15vh);
+      img {
+        width: 100vw;
+      }
+      font-size: 6vh;
+    }
+    .mesure {
+      padding-top: 15vh;
     }
   }
   @media only screen and (min-width: 1024px) {

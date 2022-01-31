@@ -98,6 +98,9 @@ const SMap = styled.div`
     padding: 3px 8px;
     display: inline;
   }
+  .imgMoreInfo:hover {
+    background-color: white;
+  }
   @media only screen and (max-width: 480px) {
     nav {
       margin: 2vh 3vw;
