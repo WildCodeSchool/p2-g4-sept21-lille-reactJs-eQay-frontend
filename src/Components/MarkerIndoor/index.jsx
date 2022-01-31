@@ -64,6 +64,7 @@ export default function MarkerIndoor() {
       let filter = 'N/A';
       let unit;
       let displayValue = 0;
+      setLoading(false);
       switch (filterValue) {
         case 'aqi':
           filter = 'Aqi';
@@ -195,7 +196,6 @@ export default function MarkerIndoor() {
   useEffect(() => {
     setLoading(true);
     updateMarkers();
-    setLoading(false);
   }, [filterValue]);
 
   return (

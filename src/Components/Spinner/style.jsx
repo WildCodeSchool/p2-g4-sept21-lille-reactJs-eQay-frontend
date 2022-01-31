@@ -3,13 +3,20 @@ import styled from 'styled-components';
 const Sspinner = styled.div`
   .spinner-box {
     width: 200px;
-    height: 100px;
+    height: 60px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(68, 68, 68, 0.5);
-    border-radius: 2rem;
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #40e495,
+      #30dd8a,
+      #2bb673
+    );
+    box-shadow: 0 4px 15px 0 rgb(49 196 190 / 75%);
+    border-radius: 3rem;
     z-index: 999;
   }
   /* PULSE BUBBLES */
@@ -19,23 +26,30 @@ const Sspinner = styled.div`
     justify-content: center;
     align-items: center;
   }
-  .pulse-container p {
-    font-size: 1.2rem;
-  }
   .pulse-bubble {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #3ff9dc;
+    background-color: white;
   }
   .pulse-bubble-1 {
     animation: pulse 0.4s ease 0s infinite alternate;
   }
   .pulse-bubble-2 {
     animation: pulse 0.4s ease 0.2s infinite alternate;
+    margin-left: 0.5rem;
   }
   .pulse-bubble-3 {
     animation: pulse 0.4s ease 0.4s infinite alternate;
+    margin-left: 0.5rem;
+  }
+  .pulse-bubble-4 {
+    animation: pulse 0.4s ease 0.6s infinite alternate;
+    margin-left: 0.5rem;
+  }
+  .pulse-bubble-5 {
+    animation: pulse 0.4s ease 0.8s infinite alternate;
+    margin-left: 0.5rem;
   }
   /* KEYFRAMES */
   @keyframes spin {
