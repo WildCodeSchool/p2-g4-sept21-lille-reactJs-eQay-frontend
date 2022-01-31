@@ -5,16 +5,7 @@ const SEvent = styled.article`
     font-family: var(--font-family-first);
     position: fixed;
     clip-path: polygon(0 0, 100vw 0, 100vw 9vh, 0 20vh);
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111),
-      rgba(40, 180, 133)
-    );
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light),
-      rgba($color-primary-dark)
-    );
+    background-image: var(--color-polygone);
     color: var(--color-head-title);
     font-weight: 400;
     height: 20vh;
@@ -22,7 +13,7 @@ const SEvent = styled.article`
     font-size: 8vh;
     padding-top: 2%;
     width: 100%;
-    text-shadow: 4px 3px 0 #7a7a7aa8;
+    text-shadow: var(--text-shadow);
   }
   .imgActu {
     display: flex;
@@ -39,37 +30,30 @@ const SEvent = styled.article`
     text-align: justify;
     padding-right: 5vw;
     margin: auto;
+    font-family: var(--font-family-second);
+    color: var(--color-paragraph-content);
   }
   .post {
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
-    );
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    );
+    background-image: var(--color-polygone);
+    padding-top: 56px;
   }
   .contentPost {
     display: flex;
     width: 70%;
     font-size: 20px;
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 3%;
     margin: auto;
     justify-content: space-evenly;
-  }
-  p {
-    color: var(--color-paragraph-content);
-    font-family: var(--font-family-second);
   }
 
   @media only screen and (max-width: 768px) {
     .headEvent {
       clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 15vh);
+      width: 100%;
+      padding-top: 38px;
+      padding-left: 25px;
     }
     .imgActu {
       padding-top: 15vh;
@@ -89,6 +73,10 @@ const SEvent = styled.article`
       width: 80%;
       text-align: center;
       padding-bottom: 5%;
+    }
+
+    .imgFrontBack {
+      width: 90vw;
     }
   }
 `;

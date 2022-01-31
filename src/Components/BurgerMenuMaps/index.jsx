@@ -21,9 +21,6 @@ export default function BurgerMenuMaps() {
         <Link id="events" className="menuItem" to="/events">
           Evénements
         </Link>
-        <Link id="goodpractices" className="menuItem" to="/goodpractices">
-          Bonnes pratiques
-        </Link>
         <Link id="about" className="menuItem" to="/aboutus">
           Qui sommes-nous?
         </Link>
@@ -40,7 +37,7 @@ export default function BurgerMenuMaps() {
           Nous soutenir
         </a>
         <div className="mailto">
-          <Mailto />
+          <Mailto email="contact@eqai.org" />
         </div>
         <section className="footer">
           <h2 className="followUs">Suivez-nous</h2>

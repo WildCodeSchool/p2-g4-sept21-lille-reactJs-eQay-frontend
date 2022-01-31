@@ -20,9 +20,9 @@ export default function News() {
               src={didYouKnow}
               alt="Le saviez-vous"
             />
-            <h3>
+            <h2>
               Oui, notre santé commence par l&#39;air que nous respirons !
-            </h3>
+            </h2>
           </div>
 
           <div className="imgContent">
@@ -52,7 +52,7 @@ export default function News() {
           </div>
         </section>
         <section className="regulation">
-          <h3>Quels sont les ERP soumis à cette réglementation ?</h3>
+          <h2>Quels sont les ERP soumis à cette réglementation ?</h2>
           <p>Cette obligation s&#39;applique notamment aux :</p>
           <ul>
             <li>
@@ -88,7 +88,7 @@ export default function News() {
             gestionnaire de l&#39;établissement sera la personne de référence
             pour le suivi de ces actions.
           </p>
-          <h3>Une entrée en vigueur progressive</h3>
+          <h2>Une entrée en vigueur progressive</h2>
           <p>
             L&#39;entrée en vigueur de ce nouveau dispositif est progressive et
             la surveillance devra être achevée avant le :
@@ -114,19 +114,27 @@ export default function News() {
                 alt="Plus d'information"
               />
               <div className="link">
-                <a href=" https://jurad-bat.net/collectivites/reglementation-QAI-france">
+                <a
+                  href=" https://jurad-bat.net/collectivites/reglementation-QAI-france"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img className="linkLogo" src={logoJuraBat} alt="logoJura" />
                 </a>
-                <a href="https://www.ecologie.gouv.fr/qualite-lair-interieur">
+                <a
+                  href="https://www.ecologie.gouv.fr/qualite-lair-interieur"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img className="linkLogo" src={logoEcologie} alt="logoGouv" />
                 </a>
               </div>
             </div>
           </figure>
-          <p className="footNews">
+          <h2 className="footNews">
             Parce qu&#39;une meilleur qualité d&#39;air est une priorité et
             qu&#39;il est possible d&#39;agir ensemble.
-          </p>
+          </h2>
         </section>
       </SNews>
     </>

@@ -35,7 +35,7 @@ export default function Map() {
               <div className="legend-atmo">
                 <div className="legend-title">
                   <p>{filterValue.toUpperCase()}</p>
-                  <Link id="about" className="menuItem" to="/moreinfo">
+                  <Link id="about" className="imgMoreInfo" to="/moreinfo">
                     <img
                       src="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/30/000000/external-question-frequently-asked-questions-faq-bearicons-detailed-outline-bearicons.png"
                       alt="questions"

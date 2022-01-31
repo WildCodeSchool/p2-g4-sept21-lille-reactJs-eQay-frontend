@@ -4,30 +4,22 @@ const SNews = styled.article`
   .headNews {
     position: fixed;
     clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 20vh);
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111),
-      rgba(40, 180, 133)
-    );
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light),
-      rgba($color-primary-dark)
-    );
+    background-image: var(--color-polygone);
     height: 20vh;
     text-align: center;
-    font-size: 5vh;
+    font-size: 8vh;
     padding-top: 3%;
     width: 100%;
     z-index: 1;
     font-family: var(--font-family-first);
     color: var(--color-head-title);
-    text-shadow: 4px 3px 0 #7a7a7aa8;
+    text-shadow: var(--text-shadow);
   }
-  h3 {
+  h2 {
     padding: 4vh;
     text-align: center;
-    font-size: 25px;
+    font-size: 2rem;
+    font-weight: bold;
     font-family: var(--font-family-first);
     color: var(--color-paragraph-title);
   }
@@ -39,6 +31,7 @@ const SNews = styled.article`
   }
   .imgDidYouKnow {
     height: 25vh;
+    padding-bottom: 10px;
   }
   .imgContent {
     padding-left: 20vw;
@@ -48,7 +41,7 @@ const SNews = styled.article`
   .contentNews {
     position: absolute;
     width: 30%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     font-weight: bold;
     margin: 30px;
@@ -78,13 +71,8 @@ const SNews = styled.article`
   }
   .organigramme {
     width: 90vw;
-  }
-  h2 {
-    padding: 4vh;
-    text-align: center;
-    font-size: 25px;
-    font-family: var(--font-family-first);
-    color: var(--color-paragraph-title);
+    max-width: 1237px;
+    max-heigth: 880px;
   }
   p {
     color: var(--color-paragraph-content);
@@ -102,17 +90,22 @@ const SNews = styled.article`
   ul {
     list-style-type: disc;
     padding: 0 0 0 40px;
+    font-size: 18px;
     color: var(--color-paragraph-content);
     font-family: var(--font-family-second);
   }
   li {
     padding: 5px;
+    font-size: 18px;
     color: var(--color-paragraph-content);
     font-family: var(--font-family-second);
+    text-align: justify;
   }
   .toKnow {
     background: #9e9e9e6e;
     margin-top: 15px;
+    border-radius: 10px;
+    text-align: justify;
   }
   .link {
     margin-top: 20px;
@@ -147,7 +140,6 @@ const SNews = styled.article`
   @media only screen and (max-width: 768px) {
     .headNews {
       clip-path: polygon(0 0, 100% 0, 100% 9vh, 0 15vh);
-      font-size: 30px;
       text-align: center;
       width: 100%;
       padding-top: 38px;
@@ -156,12 +148,11 @@ const SNews = styled.article`
     .title {
       padding-top: 15vh;
     }
-    h3 {
-      font-size: 20px;
-      padding: 10px;
+    h2 {
+      padding: 20px;
     }
     .imgDidYouKnow {
-      height: 10vh;
+      height: 16vh;
       padding: 10px;
     }
     .imgContent {
@@ -201,6 +192,12 @@ const SNews = styled.article`
     }
     .linkLogo {
       width: 30vw;
+    }
+    .toKnow {
+      text-align: left;
+    }
+    li {
+      text-align: left;
     }
   }
 `;

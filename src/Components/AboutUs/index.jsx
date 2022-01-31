@@ -42,7 +42,7 @@ export default function AboutUs() {
         <article className="presAsso">
           <img src={openData} alt="open Data" className="imgData" />
           <section className="contentPresAsso">
-            <h2>Présentation de l&#39;association</h2>
+            <h2 className="titlePresAsso">Présentation de l&#39;association</h2>
             <p>
               L&#39;association œuvre dans le monde digital en collectant les
               mesures de qualité d&#39;air effectuées par ses adhérents. Ces
@@ -68,7 +68,7 @@ export default function AboutUs() {
           </section>
         </section>
         <article className="presFounder">
-          <h2 className="titleFoudner">Les fondateurs</h2>
+          <h2 className="titleFounder">Les fondateurs</h2>
           <section className="contentFounder">
             <p>
               Cédric Brugnon et Guillaume Frémion ont travaillé pendant des
