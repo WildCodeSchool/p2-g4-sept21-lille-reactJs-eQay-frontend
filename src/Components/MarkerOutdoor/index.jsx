@@ -163,6 +163,7 @@ export default function MarkerOutdoor() {
         >
           <Popup>
             <SPopup>
+              <h2 className="titleCaptor">Capteur extérieur</h2>
               <ul>
                 <li>{`${filter} : ${displayValue} ${unit}`}</li>
                 <li className="date">
