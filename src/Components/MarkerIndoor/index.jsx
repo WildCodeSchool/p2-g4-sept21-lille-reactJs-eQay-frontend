@@ -166,6 +166,7 @@ export default function MarkerIndoor() {
         >
           <Popup>
             <SPopup>
+              <h2 className="titleCaptor">Capteur intérieur</h2>
               <ul>
                 <li>{`${filter} : ${displayValue} ${unit}`}</li>
                 <li className="date">
