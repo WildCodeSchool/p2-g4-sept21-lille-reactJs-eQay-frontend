@@ -1,12 +1,14 @@
 import BurgerMenuMaps from 'Components/BurgerMenuMaps';
 import actu from 'assets/actu.png';
 import imgFrontBack from 'assets/frontBackEnd.png';
+import EqaiLogo from 'Components/eqaiLogo';
 import SEvent from './style';
 
 export default function Event() {
   return (
     <>
       <BurgerMenuMaps />
+      <EqaiLogo />
       <SEvent>
         <h1 className="headEvent"> Evénements</h1>
         <img className="imgActu" src={actu} alt="carte" />

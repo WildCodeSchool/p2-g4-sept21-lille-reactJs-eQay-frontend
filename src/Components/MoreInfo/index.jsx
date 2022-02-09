@@ -1,4 +1,5 @@
 import BurgerMenuMaps from 'Components/BurgerMenuMaps';
+import EqaiLogo from 'Components/eqaiLogo';
 import SMoreInfo from './styles';
 import Seuil from '../../assets/Seuil.png';
 import Confort from '../../assets/Confort.png';
@@ -6,6 +7,7 @@ import Confort from '../../assets/Confort.png';
 export default function MoreInfo() {
   return (
     <>
+      <EqaiLogo />
       <BurgerMenuMaps />
       <SMoreInfo>
         <h1 className="moreInfo">En savoir plus </h1>
