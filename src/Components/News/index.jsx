@@ -5,11 +5,13 @@ import logoJuraBat from 'assets/logoJuraBat.png';
 import erp from 'assets/erp.png';
 import moreInformations from 'assets/info.png';
 import BurgerMenuMaps from 'Components/BurgerMenuMaps';
+import EqaiLogo from 'Components/eqaiLogo';
 import SNews from './style';
 
 export default function News() {
   return (
     <>
+      <EqaiLogo />
       <BurgerMenuMaps />
       <SNews>
         <h1 className="headNews"> Infos</h1>

@@ -7,6 +7,7 @@ import happyChild from 'assets/happyChild.png';
 import greenBuildings from 'assets/La-pollution-de-l-air-interieur-touche-les-ecoconstructions1.jpg';
 import AOS from 'aos';
 import { useEffect } from 'react';
+import EqaiLogo from 'Components/eqaiLogo';
 import SAboutUs from './style';
 import 'aos/dist/aos.css';
 
@@ -18,6 +19,7 @@ export default function AboutUs() {
   }, []);
   return (
     <>
+      <EqaiLogo />
       <BurgerMenuMaps />
       <SAboutUs>
         <h1 className="headAboutUs">Qui sommes-nous?</h1>
