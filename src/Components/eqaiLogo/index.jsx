@@ -6,7 +6,7 @@ export default function EqaiLogo() {
   return (
     <>
       <div className="logoContainer">
-        <Link id="home" className="menuItem" to="/">
+        <Link to="/">
           <img src={eqai} alt="eqaiLogo" className="logo" />
         </Link>
       </div>
