@@ -5,11 +5,9 @@ import './style.css';
 export default function EqaiLogo() {
   return (
     <>
-      <div className="logoContainer">
-        <Link to="/">
-          <img src={eqai} alt="eqaiLogo" className="logo" />
-        </Link>
-      </div>
+      <Link className="logoContainer" to="/">
+        <img src={eqai} alt="eqaiLogo" className="logo" />
+      </Link>
     </>
   );
 }
