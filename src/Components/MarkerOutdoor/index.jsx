@@ -181,10 +181,12 @@ export default function MarkerOutdoor() {
 
   useEffect(() => {
     try {
-      axios.get(`${process.env.REACT_APP_API_URL}/outdoor`).then(({ data }) => {
-        const finalData = data.filter((value) => value.length);
-        setAllDataOutdoor(finalData);
-      });
+      axios
+        .get(`${process.env.REACT_APP_API_URL}/outdoor/flash`)
+        .then(({ data }) => {
+          const finalData = data.filter((value) => value.length);
+          setAllDataOutdoor(finalData);
+        });
     } catch (error) {
       console.log(error);
     }

@@ -184,10 +184,12 @@ export default function MarkerIndoor() {
 
   useEffect(() => {
     try {
-      axios.get(`${process.env.REACT_APP_API_URL}/indoor`).then(({ data }) => {
-        const finalData = data.filter((value) => value.length);
-        setAllDataIndoors(finalData);
-      });
+      axios
+        .get(`${process.env.REACT_APP_API_URL}/indoor/flash`)
+        .then(({ data }) => {
+          const finalData = data.filter((value) => value.length);
+          setAllDataIndoors(finalData);
+        });
     } catch (error) {
       console.log(error);
     }
